@@ -6,7 +6,7 @@ Lo usa `reto_incendios.ipynb`, y también funciona solo desde la terminal o impo
 desde otra aplicación. Dos funciones, una por paso:
 
     crawlear()  → paso 1: descarga
-    guardar()   → paso 2: escribe los ficheros (y `comun.comprobar` los verifica)
+    guardar()   → paso 2: escribe los ficheros (y `comprobar` los verifica)
     mapa()      → paso 2: genera el mapa del reto leyendo solo esos ficheros (sin `comun`)
 
 Recoge todo lo que describe incendios en España y lo deja en ficheros:
@@ -35,16 +35,74 @@ import base64
 import json
 import sys
 import webbrowser
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from comun import coleccion, escribir_json, manifiesto, nueva_carpeta  # noqa: E402
 
 from incendios import cobertura, incidencias as incid, riesgo  # noqa: E402
 from incendios.pipeline import anotar, ejecutar, ejecutar_con_detalle, resumen  # noqa: E402
 from incendios.satelites import effis, firms, lsasaf  # noqa: E402
 
 RETO = "incendios"
+
+# --------------------------------------------------------------------------- ficheros
+# Utilidades propias de este reto (no hace falta `comun`): carpeta de salida, JSON, GeoJSON,
+# manifiesto y comprobación de lo guardado.
+SALIDA = Path(__file__).resolve().parent / "output"
+
+
+def nueva_carpeta(reto: str = RETO) -> Path:
+    """Crea `retos/output/<reto>/<fecha UTC>/` y la devuelve."""
+    carpeta = SALIDA / reto / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    carpeta.mkdir(parents=True, exist_ok=True)
+    return carpeta
+
+
+def escribir_json(ruta: Path, datos, compacto: bool = False) -> None:
+    ruta.write_text(json.dumps(datos, ensure_ascii=False, default=str,
+                               **({"separators": (",", ":")} if compacto else {"indent": 2})), encoding="utf-8")
+
+
+def leer_json(ruta: Path):
+    return json.loads(Path(ruta).read_text(encoding="utf-8"))
+
+
+def coleccion(registros: list[dict], capa: str, geom=None) -> dict:
+    """Registros -> FeatureCollection. `geom(registro)` da la geometría; si no, un punto con lat/lon."""
+    features = []
+    for r in registros:
+        g = geom(r) if geom else None
+        if not g and r.get("lat") is not None and r.get("lon") is not None:
+            g = {"type": "Point", "coordinates": [r["lon"], r["lat"]]}
+        props = {k: v for k, v in r.items() if k not in ("lat", "lon", "geometria")}
+        features.append({"type": "Feature", "geometry": g, "properties": props})
+    return {"type": "FeatureCollection", "name": capa, "features": features}
+
+
+def manifiesto(carpeta: Path, reto: str, capas: dict, estado: dict, parametros: dict) -> Path:
+    ruta = carpeta / "manifiesto.json"
+    escribir_json(ruta, {"reto": reto, "generado_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                         "parametros": parametros, "capas": capas, "estado": estado})
+    return ruta
+
+
+def comprobar(carpeta: Path) -> list[dict]:
+    """Relee lo guardado y lo compara con el manifiesto: cada fichero debe existir y tener todos sus registros."""
+    filas = []
+    for capa, info in leer_json(carpeta / "manifiesto.json")["capas"].items():
+        ruta, esperado, hallado = carpeta / info["fichero"], info["registros"], None
+        try:
+            datos = leer_json(ruta)
+            hallado = len(datos["features"]) if info["tipo"] == "geojson" else len(datos["dias"])
+            if info["tipo"] == "imagen":  # el riesgo son PNG: tienen que estar todos
+                hallado = sum((carpeta / d["imagen"]).exists() and (carpeta / d["niveles"]).exists() for d in datos["dias"])
+        except (OSError, ValueError, KeyError):
+            pass
+        filas.append({"capa": capa, "fichero": info["fichero"], "manifiesto": esperado, "en el fichero": hallado,
+                      "ok": hallado == esperado})
+    return filas
+
 
 
 async def crawlear(horas_focos: int = 24, horas_seviri: float = 3, dias_effis: int = 7,
