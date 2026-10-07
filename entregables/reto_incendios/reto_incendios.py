@@ -38,7 +38,30 @@ import webbrowser
 from datetime import datetime, timezone
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+import os  # noqa: E402
+
+
+def _localizar_proyecto() -> Path | None:
+    """Carpeta que contiene el paquete `incendios/`, esté donde esté el reto.
+
+    Orden: variable INCENDIOS_RAIZ, esta carpeta y la actual (y sus padres, con sus hermanos
+    `Incendios*`), y las ubicaciones habituales dentro de la carpeta personal."""
+    candidatos = [Path(os.environ["INCENDIOS_RAIZ"]).expanduser()] if os.environ.get("INCENDIOS_RAIZ") else []
+    for base in (Path(__file__).resolve().parent, Path.cwd()):
+        for p in (base, *base.parents):
+            candidatos += [p, *sorted(p.glob("Incendios*")), *sorted(p.glob("*/Incendios*"))]
+    candidatos += sorted(Path.home().glob("Downloads/*/*/Incendios*")) + sorted(Path.home().glob("*/Incendios*"))
+    return next((c for c in candidatos if (c / "incendios" / "__init__.py").exists()), None)
+
+
+RAIZ = _localizar_proyecto()
+if RAIZ is None:
+    raise FileNotFoundError(
+        "No encuentro el proyecto (la carpeta que contiene `incendios/`). Indícalo con la variable de entorno "
+        "INCENDIOS_RAIZ o, en el notebook, con RUTA_PROYECTO en la primera celda.")
+for _ruta in (RAIZ, Path(__file__).resolve().parent):
+    if str(_ruta) not in sys.path:
+        sys.path.insert(0, str(_ruta))
 
 from incendios import cobertura, incidencias as incid, riesgo  # noqa: E402
 from incendios.pipeline import anotar, ejecutar, ejecutar_con_detalle, resumen  # noqa: E402
@@ -49,7 +72,7 @@ RETO = "incendios"
 # --------------------------------------------------------------------------- ficheros
 # Utilidades propias de este reto (no hace falta `comun`): carpeta de salida, JSON, GeoJSON,
 # manifiesto y comprobación de lo guardado.
-SALIDA = Path(__file__).resolve().parent / "output"
+SALIDA = (RAIZ / "retos") / "output"  # los datos van al proyecto, aunque este fichero esté en otra carpeta
 
 
 def nueva_carpeta(reto: str = RETO) -> Path:
@@ -194,7 +217,7 @@ def _propiedades(ruta: Path) -> list[dict]:
 
 
 def _carpeta_reciente() -> Path:
-    base = Path(__file__).resolve().parent / "output" / RETO
+    base = SALIDA / RETO
     carpetas = sorted(p for p in base.glob("*") if p.is_dir()) if base.exists() else []
     if not carpetas:
         raise FileNotFoundError(f"No hay datos de «{RETO}» en {base}: ejecuta antes el reto.")
