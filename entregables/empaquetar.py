@@ -31,7 +31,10 @@ from pathlib import Path
 
 AQUI = Path(__file__).resolve().parent
 RETOS = ("incendios", "vientos")
-COMUN = ("__pycache__", "*.pyc", ".DS_Store", ".env", ".ipynb_checkpoints", ".git")
+# `plantillas/` y `visor.py` son del visor antiguo (los retos no lo usan) y llevan un .js: Gmail bloquea
+# los zips que contienen .js, .exe, etc. Tampoco se copian los datos que solo usa el visor (relieve, regiones).
+COMUN = ("__pycache__", "*.pyc", ".DS_Store", ".env", ".ipynb_checkpoints", ".git",
+         "plantillas", "visor.py", "relieve*", "regiones_espana*")
 # El reto de vientos no usa la cobertura del suelo (ESA WorldCover): no hace falta arrastrar esos .tif.
 IGNORAR = {"incendios": shutil.ignore_patterns(*COMUN), "vientos": shutil.ignore_patterns(*COMUN, "cobertura_*")}
 # Dependencias que solo necesita el reto de incendios (SEVIRI, cobertura, INFORCYL).
