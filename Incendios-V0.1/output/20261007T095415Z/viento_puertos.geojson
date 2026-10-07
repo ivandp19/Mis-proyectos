@@ -1,0 +1,3021 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.5625,
+     43.34791564941406
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "1239",
+    "nombre": "Boya de Langosteira II",
+    "lat": 43.34791564941406,
+    "lon": -8.5625,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 15.1,
+    "racha_kmh": null,
+    "direccion_grados": 316.0,
+    "direccion_cardinal": "NO",
+    "hacia_grados": 136.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 15.7,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red costera"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.415830135345459,
+     36.06624984741211
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "1504",
+    "nombre": "Boya de Algeciras-Pta. Carnero",
+    "lat": 36.06624984741211,
+    "lon": -5.415830135345459,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 28.4,
+    "racha_kmh": null,
+    "direccion_grados": 243.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 63.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 21.4,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red costera"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.9782,
+     37.5385
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "1612",
+    "nombre": "Boya de Cartagena",
+    "lat": 37.5385,
+    "lon": -0.9782,
+    "fecha_utc": "2026-10-07T06:30:00+00:00",
+    "velocidad_kmh": 19.8,
+    "racha_kmh": null,
+    "direccion_grados": 211.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 31.0,
+    "antiguedad_min": 205,
+    "temperatura_c": 25.1,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red costera"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.03,
+     43.63
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2136",
+    "nombre": "Boya de Bilbao-Vizcaya",
+    "lat": 43.63,
+    "lon": -3.03,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 32.9,
+    "racha_kmh": null,
+    "direccion_grados": 262.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 82.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 19.9,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.18,
+     43.75
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2242",
+    "nombre": "Boya de Cabo de Peñas",
+    "lat": 43.75,
+    "lon": -6.18,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 37.1,
+    "racha_kmh": null,
+    "direccion_grados": 273.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 93.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 17.2,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.68,
+     44.12
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2244",
+    "nombre": "Boya de Estaca de Bares",
+    "lat": 44.12,
+    "lon": -7.68,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 27.0,
+    "racha_kmh": null,
+    "direccion_grados": 225.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 45.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 19.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.21,
+     43.5
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2246",
+    "nombre": "Boya de Villano-Sisargas",
+    "lat": 43.5,
+    "lon": -9.21,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 11.8,
+    "racha_kmh": null,
+    "direccion_grados": 357.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 177.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 16.8,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.43,
+     42.12
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2248",
+    "nombre": "Boya de Cabo Silleiro",
+    "lat": 42.12,
+    "lon": -9.43,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 27.8,
+    "racha_kmh": null,
+    "direccion_grados": 11.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 191.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 18.5,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.96,
+     36.49
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2342",
+    "nombre": "Boya de Golfo de Cádiz",
+    "lat": 36.49,
+    "lon": -6.96,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 16.9,
+    "racha_kmh": null,
+    "direccion_grados": 354.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 174.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 20.8,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -15.8,
+     28.2
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2442",
+    "nombre": "Boya de Gran Canaria",
+    "lat": 28.2,
+    "lon": -15.8,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 21.9,
+    "racha_kmh": null,
+    "direccion_grados": 37.0,
+    "direccion_cardinal": "NE",
+    "hacia_grados": 217.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 24.0,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -16.61,
+     28.0
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2446",
+    "nombre": "Boya de Tenerife Sur",
+    "lat": 28.0,
+    "lon": -16.61,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 28.7,
+    "racha_kmh": null,
+    "direccion_grados": 68.0,
+    "direccion_cardinal": "ENE",
+    "hacia_grados": 248.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 24.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.34,
+     36.57
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2548",
+    "nombre": "Boya de Cabo de Gata",
+    "lat": 36.57,
+    "lon": -2.34,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 24.5,
+    "racha_kmh": null,
+    "direccion_grados": 245.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 65.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 23.1,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.31,
+     37.65
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2610",
+    "nombre": "Boya de Cabo de Palos",
+    "lat": 37.65,
+    "lon": -0.31,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 16.0,
+    "racha_kmh": null,
+    "direccion_grados": 267.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 87.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 25.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.2,
+     39.51
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2630",
+    "nombre": "Boya de Valencia",
+    "lat": 39.51,
+    "lon": 0.2,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 21.1,
+    "racha_kmh": null,
+    "direccion_grados": 256.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 76.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 23.2,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.47,
+     40.69
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2720",
+    "nombre": "Boya de Tarragona",
+    "lat": 40.69,
+    "lon": 1.47,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 12.7,
+    "racha_kmh": null,
+    "direccion_grados": 273.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 93.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 23.5,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     3.65,
+     41.9
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2798",
+    "nombre": "Boya de Cabo Begur",
+    "lat": 41.9,
+    "lon": 3.65,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 27.8,
+    "racha_kmh": null,
+    "direccion_grados": 174.0,
+    "direccion_cardinal": "S",
+    "hacia_grados": 354.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 21.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.0966999530792236,
+     39.56330108642578
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2820",
+    "nombre": "Boya de Dragonera",
+    "lat": 39.56330108642578,
+    "lon": 2.0966999530792236,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 24.5,
+    "racha_kmh": null,
+    "direccion_grados": 208.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 28.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 24.8,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.42,
+     39.71
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "2838",
+    "nombre": "Boya de Mahón",
+    "lat": 39.71,
+    "lon": 4.42,
+    "fecha_utc": "2026-10-07T09:00:00+00:00",
+    "velocidad_kmh": 22.8,
+    "racha_kmh": null,
+    "direccion_grados": 231.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 51.0,
+    "antiguedad_min": 55,
+    "temperatura_c": 25.4,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "boya",
+    "red": "Red exterior"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.69835,
+     43.55803
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3108",
+    "nombre": "Mareógrafo de Gijón 2",
+    "lat": 43.55803,
+    "lon": -5.69835,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 15.5,
+    "racha_kmh": 26.3,
+    "direccion_grados": 236.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 56.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.923251986503601,
+     43.32317352294922
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3115",
+    "nombre": "Mareógrafo de Pasaia",
+    "lat": 43.32317352294922,
+    "lon": -1.923251986503601,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 2.5,
+    "racha_kmh": 3.2,
+    "direccion_grados": 79.0,
+    "direccion_cardinal": "E",
+    "hacia_grados": 259.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.460933208465576,
+     43.709041595458984
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3210",
+    "nombre": "Mareógrafo de San Cibrao",
+    "lat": 43.709041595458984,
+    "lon": -7.460933208465576,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 4.3,
+    "racha_kmh": 7.6,
+    "direccion_grados": 153.0,
+    "direccion_cardinal": "SSE",
+    "hacia_grados": 333.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.32582,
+     43.46285
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3215",
+    "nombre": "Mareógrafo de Ferrol 1",
+    "lat": 43.46285,
+    "lon": -8.32582,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 6.1,
+    "racha_kmh": 13.3,
+    "direccion_grados": 36.0,
+    "direccion_cardinal": "NE",
+    "hacia_grados": 216.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.77003,
+     42.60071
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3220",
+    "nombre": "Mareógrafo de Villagarcía 2",
+    "lat": 42.60071,
+    "lon": -8.77003,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 10.1,
+    "racha_kmh": 15.5,
+    "direccion_grados": 75.0,
+    "direccion_cardinal": "ENE",
+    "hacia_grados": 255.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.726,
+     42.24311447143555
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3221",
+    "nombre": "Mareógrafo de Vigo 2",
+    "lat": 42.24311447143555,
+    "lon": -8.726,
+    "fecha_utc": "2026-10-07T09:55:00+00:00",
+    "velocidad_kmh": 5.0,
+    "racha_kmh": 5.8,
+    "direccion_grados": 303.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 123.0,
+    "antiguedad_min": 0,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.69108,
+     42.40612
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3223",
+    "nombre": "Mareógrafo de Marín",
+    "lat": 42.40612,
+    "lon": -8.69108,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 13.3,
+    "racha_kmh": 16.9,
+    "direccion_grados": 351.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 171.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.83369,
+     37.13202
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3329",
+    "nombre": "Mareógrafo de Huelva 5",
+    "lat": 37.13202,
+    "lon": -6.83369,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 10.4,
+    "racha_kmh": 14.8,
+    "direccion_grados": 301.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 121.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.33813,
+     36.80221
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3333",
+    "nombre": "Mareógrafo de Bonanza 2",
+    "lat": 36.80221,
+    "lon": -6.33813,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 10.1,
+    "racha_kmh": 14.0,
+    "direccion_grados": 265.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 85.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.273617,
+     36.911783
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3334",
+    "nombre": "Mareógrafo de Guadalquivir-Puntal",
+    "lat": 36.911783,
+    "lon": -6.273617,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 9.0,
+    "racha_kmh": null,
+    "direccion_grados": 233.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 53.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.084003,
+     37.096783
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3335",
+    "nombre": "Mareógrafo de Guadalquivir-Caseta",
+    "lat": 37.096783,
+    "lon": -6.084003,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 6.5,
+    "racha_kmh": null,
+    "direccion_grados": 273.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 93.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.00772,
+     37.31849
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3337",
+    "nombre": "Mareógrafo de Sevilla 2",
+    "lat": 37.31849,
+    "lon": -6.00772,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 7.2,
+    "racha_kmh": null,
+    "direccion_grados": 229.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 49.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -15.41181,
+     28.14056
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3450",
+    "nombre": "Mareógrafo de Las Palmas 2",
+    "lat": 28.14056,
+    "lon": -15.41181,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 19.8,
+    "racha_kmh": 24.8,
+    "direccion_grados": 28.0,
+    "direccion_cardinal": "NNE",
+    "hacia_grados": 208.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -13.85822,
+     28.49251
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3469",
+    "nombre": "Mareógrafo de Fuerteventura 2",
+    "lat": 28.49251,
+    "lon": -13.85822,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 19.1,
+    "racha_kmh": 21.6,
+    "direccion_grados": 19.0,
+    "direccion_cardinal": "NNE",
+    "hacia_grados": 199.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -13.53006,
+     28.97188
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3470",
+    "nombre": "Mareógrafo de Lanzarote-Arrecife",
+    "lat": 28.97188,
+    "lon": -13.53006,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 13.7,
+    "racha_kmh": 26.6,
+    "direccion_grados": 38.0,
+    "direccion_cardinal": "NE",
+    "hacia_grados": 218.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.39838,
+     36.177
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3541",
+    "nombre": "Mareógrafo de Algeciras",
+    "lat": 36.177,
+    "lon": -5.39838,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 14.8,
+    "racha_kmh": 31.3,
+    "direccion_grados": 236.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 56.0,
+    "antiguedad_min": 5,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.5236,
+     36.72024
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3543",
+    "nombre": "Mareógrafo de Motril 2",
+    "lat": 36.72024,
+    "lon": -3.5236,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 24.1,
+    "racha_kmh": 32.0,
+    "direccion_grados": 257.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 77.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.47835,
+     36.83002
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3545",
+    "nombre": "Mareógrafo de Almería",
+    "lat": 36.83002,
+    "lon": -2.47835,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 34.9,
+    "racha_kmh": 37.8,
+    "direccion_grados": 240.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 60.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.89959,
+     36.9743
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3547",
+    "nombre": "Mareógrafo de Carboneras",
+    "lat": 36.9743,
+    "lon": -1.89959,
+    "fecha_utc": "2026-10-07T09:52:00+00:00",
+    "velocidad_kmh": 0.0,
+    "racha_kmh": 0.0,
+    "direccion_grados": 0.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 180.0,
+    "antiguedad_min": 3,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.4809,
+     36.8319
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3548",
+    "nombre": "Mareógrafo de Almería 2",
+    "lat": 36.8319,
+    "lon": -2.4809,
+    "fecha_utc": "2026-10-07T09:55:00+00:00",
+    "velocidad_kmh": 26.3,
+    "racha_kmh": 30.6,
+    "direccion_grados": 233.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 53.0,
+    "antiguedad_min": 0,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.21325,
+     41.07897
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3756",
+    "nombre": "Mareógrafo de Tarragona",
+    "lat": 41.07897,
+    "lon": 1.21325,
+    "fecha_utc": "2026-10-07T09:47:00+00:00",
+    "velocidad_kmh": 30.6,
+    "racha_kmh": 34.2,
+    "direccion_grados": 288.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 108.0,
+    "antiguedad_min": 8,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.63748,
+     39.56015
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3851",
+    "nombre": "Mareógrafo de Palma de Mallorca",
+    "lat": 39.56015,
+    "lon": 2.63748,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 3.2,
+    "racha_kmh": 4.0,
+    "direccion_grados": 50.0,
+    "direccion_cardinal": "NE",
+    "hacia_grados": 230.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     3.13898,
+     39.83456
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3853",
+    "nombre": "Mareógrafo de Alcudia",
+    "lat": 39.83456,
+    "lon": 3.13898,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 10.4,
+    "racha_kmh": 13.3,
+    "direccion_grados": 238.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 58.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.41903,
+     38.73466
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3855",
+    "nombre": "Mareógrafo de Formentera",
+    "lat": 38.73466,
+    "lon": 1.41903,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 21.2,
+    "racha_kmh": 25.6,
+    "direccion_grados": 276.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 96.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.44984,
+     38.91123
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3856",
+    "nombre": "Mareógrafo de Ibiza 2",
+    "lat": 38.91123,
+    "lon": 1.44984,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 9.4,
+    "racha_kmh": 17.6,
+    "direccion_grados": 259.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 79.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.27056,
+     39.89304
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "3860",
+    "nombre": "Mareógrafo de Mahón",
+    "lat": 39.89304,
+    "lon": 4.27056,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 6.5,
+    "racha_kmh": 14.8,
+    "direccion_grados": 288.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 108.0,
+    "antiguedad_min": 1,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "mareógrafo",
+    "red": "Mareografos"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.0309957,
+     43.3396053
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4132",
+    "nombre": "Estación Meteorológica de Bilbao Espigón 2 (APB-5)",
+    "lat": 43.3396053,
+    "lon": -3.0309957,
+    "fecha_utc": "2026-10-07T09:20:00+00:00",
+    "velocidad_kmh": 3.2,
+    "racha_kmh": 10.8,
+    "direccion_grados": 270.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 90.0,
+    "antiguedad_min": 35,
+    "temperatura_c": 20.9,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.0324419,
+     43.3421524
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4133",
+    "nombre": "Estación Meteorológica de Bilbao Muelle Princesa (APB-4)",
+    "lat": 43.3421524,
+    "lon": -3.0324419,
+    "fecha_utc": "2026-10-07T09:20:00+00:00",
+    "velocidad_kmh": 4.0,
+    "racha_kmh": 10.4,
+    "direccion_grados": 316.0,
+    "direccion_cardinal": "NO",
+    "hacia_grados": 136.0,
+    "antiguedad_min": 35,
+    "temperatura_c": 19.4,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.0402515,
+     43.3495866
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4134",
+    "nombre": "Estación Meteorológica de Bilbao Contradique (APB-3)",
+    "lat": 43.3495866,
+    "lon": -3.0402515,
+    "fecha_utc": "2026-10-07T09:20:00+00:00",
+    "velocidad_kmh": 6.1,
+    "racha_kmh": 13.3,
+    "direccion_grados": 254.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 74.0,
+    "antiguedad_min": 35,
+    "temperatura_c": 19.9,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.0536793,
+     43.3466938
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4135",
+    "nombre": "Estación Meteorológica de Bilbao Muelle A-2 (APB-1)",
+    "lat": 43.3466938,
+    "lon": -3.0536793,
+    "fecha_utc": "2026-10-07T09:20:00+00:00",
+    "velocidad_kmh": 6.8,
+    "racha_kmh": 19.4,
+    "direccion_grados": 280.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 100.0,
+    "antiguedad_min": 35,
+    "temperatura_c": 20.1,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.0540499687194824,
+     43.3578122
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4136",
+    "nombre": "Estación Meteorológica de Bilbao Muelle AZ-1 (APB-2)",
+    "lat": 43.3578122,
+    "lon": -3.0540499687194824,
+    "fecha_utc": "2026-10-07T09:20:00+00:00",
+    "velocidad_kmh": 11.2,
+    "racha_kmh": 18.0,
+    "direccion_grados": 282.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 102.0,
+    "antiguedad_min": 35,
+    "temperatura_c": 18.6,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.92243,
+     43.56896
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4171",
+    "nombre": "Estación Meteorológica Conde Guadalhorce",
+    "lat": 43.56896,
+    "lon": -5.92243,
+    "fecha_utc": "2026-10-07T09:15:00+00:00",
+    "velocidad_kmh": 24.5,
+    "racha_kmh": null,
+    "direccion_grados": 114.0,
+    "direccion_cardinal": "ESE",
+    "hacia_grados": 294.0,
+    "antiguedad_min": 40,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.92519,
+     43.59245
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4172",
+    "nombre": "Estación Meteorológica de Astillero",
+    "lat": 43.59245,
+    "lon": -5.92519,
+    "fecha_utc": "2026-10-07T09:15:00+00:00",
+    "velocidad_kmh": 16.6,
+    "racha_kmh": null,
+    "direccion_grados": 79.0,
+    "direccion_cardinal": "E",
+    "hacia_grados": 259.0,
+    "antiguedad_min": 40,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.92151,
+     43.56186
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4173",
+    "nombre": "Estación Meteorológica del Pto. Deportivo",
+    "lat": 43.56186,
+    "lon": -5.92151,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 9.7,
+    "racha_kmh": null,
+    "direccion_grados": 291.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 111.0,
+    "antiguedad_min": 25,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.92295,
+     43.57771
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4174",
+    "nombre": "Estación Meteorológica de Raíces",
+    "lat": 43.57771,
+    "lon": -5.92295,
+    "fecha_utc": "2026-10-07T08:45:00+00:00",
+    "velocidad_kmh": 10.4,
+    "racha_kmh": null,
+    "direccion_grados": 316.0,
+    "direccion_cardinal": "NO",
+    "hacia_grados": 136.0,
+    "antiguedad_min": 70,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.94461,
+     43.59584
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4175",
+    "nombre": "Estación Meteorológica Faro de San Juan",
+    "lat": 43.59584,
+    "lon": -5.94461,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 21.6,
+    "racha_kmh": null,
+    "direccion_grados": 278.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 98.0,
+    "antiguedad_min": 25,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.92437,
+     43.58859
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4176",
+    "nombre": "Estación Meteorológica Dársena de San Juan",
+    "lat": 43.58859,
+    "lon": -5.92437,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 9.7,
+    "racha_kmh": null,
+    "direccion_grados": 266.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 86.0,
+    "antiguedad_min": 25,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.9203,
+     43.57839
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4177",
+    "nombre": "Estación Meteorológica Valliniello Norte",
+    "lat": 43.57839,
+    "lon": -5.9203,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 15.1,
+    "racha_kmh": null,
+    "direccion_grados": 240.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 60.0,
+    "antiguedad_min": 25,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.91918,
+     43.56944
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4178",
+    "nombre": "Estación Meteorológica Valliniello Sur",
+    "lat": 43.56944,
+    "lon": -5.91918,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 15.5,
+    "racha_kmh": null,
+    "direccion_grados": 180.0,
+    "direccion_cardinal": "S",
+    "hacia_grados": 0.0,
+    "antiguedad_min": 25,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.244282722473145,
+     43.47591781616211
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4241",
+    "nombre": "Estación Meteorológica CCS Curuxeiras",
+    "lat": 43.47591781616211,
+    "lon": -8.244282722473145,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 0.4,
+    "racha_kmh": 0.7,
+    "direccion_grados": 96.0,
+    "direccion_cardinal": "E",
+    "hacia_grados": 276.0,
+    "antiguedad_min": 25,
+    "temperatura_c": 18.0,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.247320175170898,
+     43.48298263549805
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4242",
+    "nombre": "Estación Meteorológica Casa del Mar",
+    "lat": 43.48298263549805,
+    "lon": -8.247320175170898,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 4.3,
+    "racha_kmh": 19.1,
+    "direccion_grados": 355.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 175.0,
+    "antiguedad_min": 25,
+    "temperatura_c": 18.0,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.32057,
+     43.468
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4243",
+    "nombre": "Estación Meteorológica del Puerto Exterior",
+    "lat": 43.468,
+    "lon": -8.32057,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 6.5,
+    "racha_kmh": 11.5,
+    "direccion_grados": 207.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 27.0,
+    "antiguedad_min": 25,
+    "temperatura_c": 22.8,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.66422,
+     42.4092
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4271",
+    "nombre": "Estación Meteorológica de Lourizán",
+    "lat": 42.4092,
+    "lon": -8.66422,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 0.4,
+    "racha_kmh": 3.6,
+    "direccion_grados": 227.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 47.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 16.6,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.93619,
+     42.3821
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4272",
+    "nombre": "Estación Meteorológica de Ons",
+    "lat": 42.3821,
+    "lon": -8.93619,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 12.2,
+    "racha_kmh": 16.2,
+    "direccion_grados": 358.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 178.0,
+    "antiguedad_min": 25,
+    "temperatura_c": 17.2,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.8338,
+     42.3396
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4273",
+    "nombre": "Estación Meteorológica de Cabo Udra",
+    "lat": 42.3396,
+    "lon": -8.8338,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 7.9,
+    "racha_kmh": 11.5,
+    "direccion_grados": 24.0,
+    "direccion_cardinal": "NNE",
+    "hacia_grados": 204.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 18.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.42805,
+     36.1475
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4380",
+    "nombre": "Estación Meteorológica Morro de dique de Abrigo",
+    "lat": 36.1475,
+    "lon": -5.42805,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 27.7,
+    "racha_kmh": 40.3,
+    "direccion_grados": 278.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 98.0,
+    "antiguedad_min": 15,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.436699867248535,
+     36.13199996948242
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4381",
+    "nombre": "Estación Meteorológica Atraques Galera",
+    "lat": 36.13199996948242,
+    "lon": -5.436699867248535,
+    "fecha_utc": "2026-10-07T08:10:00+00:00",
+    "velocidad_kmh": 13.0,
+    "racha_kmh": 22.3,
+    "direccion_grados": 265.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 85.0,
+    "antiguedad_min": 105,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.4305,
+     36.136
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4391",
+    "nombre": "Est. Meteorológica de Dique de Abrigo",
+    "lat": 36.136,
+    "lon": -5.4305,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 27.7,
+    "racha_kmh": 38.9,
+    "direccion_grados": 265.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 85.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 23.2,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.4262,
+     36.07714
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4392",
+    "nombre": "Est. Meteorológica de Pta. Carnero",
+    "lat": 36.07714,
+    "lon": -5.4262,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 21.6,
+    "racha_kmh": 32.4,
+    "direccion_grados": 207.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 27.0,
+    "antiguedad_min": 15,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.41754,
+     36.11665
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4395",
+    "nombre": "Estación Meteorológica de Dique Exento-Sur",
+    "lat": 36.11665,
+    "lon": -5.41754,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 18.4,
+    "racha_kmh": 28.4,
+    "direccion_grados": 295.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 115.0,
+    "antiguedad_min": 15,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.3811,
+     36.1725
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4396",
+    "nombre": "Estación Meteorológica de Campamento",
+    "lat": 36.1725,
+    "lon": -5.3811,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 20.9,
+    "racha_kmh": 28.1,
+    "direccion_grados": 248.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 68.0,
+    "antiguedad_min": 15,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.4197,
+     36.173
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4397",
+    "nombre": "Estación Meteorológica Endesa",
+    "lat": 36.173,
+    "lon": -5.4197,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 27.4,
+    "racha_kmh": 38.9,
+    "direccion_grados": 280.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 100.0,
+    "antiguedad_min": 15,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.60111,
+     36.00805
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4398",
+    "nombre": "Estación Meteorológica del dique del Pto. de Tarifa",
+    "lat": 36.00805,
+    "lon": -5.60111,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 23.0,
+    "racha_kmh": 28.1,
+    "direccion_grados": 263.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 83.0,
+    "antiguedad_min": 15,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.43979,
+     36.1307
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4399",
+    "nombre": "Estación Meteorológica Pto. de Algeciras",
+    "lat": 36.1307,
+    "lon": -5.43979,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 15.5,
+    "racha_kmh": 31.0,
+    "direccion_grados": 320.0,
+    "direccion_cardinal": "NO",
+    "hacia_grados": 140.0,
+    "antiguedad_min": 15,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.4147306,
+     36.698942
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4505",
+    "nombre": "Estación Meteo. Málaga Dique Levante Sur",
+    "lat": 36.698942,
+    "lon": -4.4147306,
+    "fecha_utc": "2026-10-07T09:49:00+00:00",
+    "velocidad_kmh": 16.9,
+    "racha_kmh": 20.5,
+    "direccion_grados": 237.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 57.0,
+    "antiguedad_min": 6,
+    "temperatura_c": 23.9,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.514306,
+     36.712306
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4507",
+    "nombre": "Estación Meteorológica Dique Exterior Motril",
+    "lat": 36.712306,
+    "lon": -3.514306,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 15.1,
+    "racha_kmh": 24.8,
+    "direccion_grados": 277.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 97.0,
+    "antiguedad_min": 5,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.90662,
+     36.94172
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4581",
+    "nombre": "Estación Meteorológica Faro de Mesa Roldán",
+    "lat": 36.94172,
+    "lon": -1.90662,
+    "fecha_utc": "2026-10-07T09:48:41+00:00",
+    "velocidad_kmh": 24.1,
+    "racha_kmh": null,
+    "direccion_grados": 213.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 33.0,
+    "antiguedad_min": 6,
+    "temperatura_c": 24.7,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.46417,
+     36.82583
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4582",
+    "nombre": "Estación Meteorológica Faro de Almería",
+    "lat": 36.82583,
+    "lon": -2.46417,
+    "fecha_utc": "2026-10-07T09:52:00+00:00",
+    "velocidad_kmh": 31.0,
+    "racha_kmh": 33.8,
+    "direccion_grados": 237.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 57.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 24.1,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.899012,
+     36.969073
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4583",
+    "nombre": "Estación Meteorológica de Carboneras",
+    "lat": 36.969073,
+    "lon": -1.899012,
+    "fecha_utc": "2026-10-07T09:53:00+00:00",
+    "velocidad_kmh": 17.3,
+    "racha_kmh": 20.2,
+    "direccion_grados": 224.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 44.0,
+    "antiguedad_min": 2,
+    "temperatura_c": 26.4,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.97914,
+     37.56678
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4625",
+    "nombre": "Estación Meteorológica Cartagena Dique Suroeste",
+    "lat": 37.56678,
+    "lon": -0.97914,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 17.3,
+    "racha_kmh": 21.2,
+    "direccion_grados": 242.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 62.0,
+    "antiguedad_min": 25,
+    "temperatura_c": 24.7,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.95507,
+     37.57211
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4626",
+    "nombre": "Estación Meteorológica Cartagena Muelle Príncipe Felipe",
+    "lat": 37.57211,
+    "lon": -0.95507,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 7.6,
+    "racha_kmh": 11.9,
+    "direccion_grados": 239.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 59.0,
+    "antiguedad_min": 25,
+    "temperatura_c": 25.8,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.9744,
+     37.59765
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4627",
+    "nombre": "Estación Meteorológica Cartagena Talleres Sta. Lucía",
+    "lat": 37.59765,
+    "lon": -0.9744,
+    "fecha_utc": "2026-10-07T09:30:00+00:00",
+    "velocidad_kmh": 11.2,
+    "racha_kmh": 19.1,
+    "direccion_grados": 212.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 32.0,
+    "antiguedad_min": 25,
+    "temperatura_c": 24.8,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.208243,
+     39.643423
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4632",
+    "nombre": "Estac. Meteo. Sagunto Muelle de Levante",
+    "lat": 39.643423,
+    "lon": -0.208243,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 26.3,
+    "racha_kmh": 38.2,
+    "direccion_grados": 245.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 65.0,
+    "antiguedad_min": 5,
+    "temperatura_c": 22.2,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.21606899797916412,
+     39.65633773803711
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4633",
+    "nombre": "Estac. Meteo. Sagunto Norte",
+    "lat": 39.65633773803711,
+    "lon": -0.21606899797916412,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 12.6,
+    "racha_kmh": 38.5,
+    "direccion_grados": 220.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 40.0,
+    "antiguedad_min": 5,
+    "temperatura_c": 25.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.15169499814510345,
+     38.99505615234375
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4634",
+    "nombre": "Estación Meteorológica Gandía Serpis",
+    "lat": 38.99505615234375,
+    "lon": -0.15169499814510345,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 5.8,
+    "racha_kmh": 7.2,
+    "direccion_grados": 29.0,
+    "direccion_cardinal": "NNE",
+    "hacia_grados": 209.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 25.0,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.30319100618362427,
+     39.43409729003906
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4635",
+    "nombre": "Estación Meteo. Valencia Dique del Este II",
+    "lat": 39.43409729003906,
+    "lon": -0.30319100618362427,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 12.6,
+    "racha_kmh": 16.9,
+    "direccion_grados": 278.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 98.0,
+    "antiguedad_min": 15,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.32372,
+     39.426088
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4636",
+    "nombre": "Estac. Meteo. Valencia Príncipe Felipe",
+    "lat": 39.426088,
+    "lon": -0.32372,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 6.5,
+    "racha_kmh": 11.2,
+    "direccion_grados": 248.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 68.0,
+    "antiguedad_min": 5,
+    "temperatura_c": 25.5,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.302675,
+     39.434329
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4637",
+    "nombre": "Estación Meteo. Valencia Dique del Este",
+    "lat": 39.434329,
+    "lon": -0.302675,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 10.8,
+    "racha_kmh": 15.5,
+    "direccion_grados": 269.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 89.0,
+    "antiguedad_min": 5,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.49361,
+     38.32944
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4651",
+    "nombre": "Estación Meteorológica Alicante-Muelle 19",
+    "lat": 38.32944,
+    "lon": -0.49361,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 5.8,
+    "racha_kmh": 7.6,
+    "direccion_grados": 202.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 22.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 28.4,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.5025,
+     38.33472
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4652",
+    "nombre": "E. Meteorológica de Alicante Parque del Mar",
+    "lat": 38.33472,
+    "lon": -0.5025,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 7.9,
+    "racha_kmh": 18.0,
+    "direccion_grados": 167.0,
+    "direccion_cardinal": "SSE",
+    "hacia_grados": 347.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 29.0,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.49667,
+     38.33694
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4653",
+    "nombre": "E. Meteorológica de Alicante Tinglado Frutero",
+    "lat": 38.33694,
+    "lon": -0.49667,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 7.2,
+    "racha_kmh": 12.2,
+    "direccion_grados": 204.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 24.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 28.8,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.02505,
+     39.97736
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4660",
+    "nombre": "Estación Meteorológica de Castellón Mistral",
+    "lat": 39.97736,
+    "lon": 0.02505,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 5.4,
+    "racha_kmh": 11.2,
+    "direccion_grados": 183.0,
+    "direccion_cardinal": "S",
+    "hacia_grados": 3.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 26.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.016527,
+     39.975027
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4661",
+    "nombre": "Estación Meteorológica de Castellón Tamontana",
+    "lat": 39.975027,
+    "lon": 0.016527,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 5.0,
+    "racha_kmh": 16.2,
+    "direccion_grados": 217.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 37.0,
+    "antiguedad_min": 5,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.016110999509692192,
+     39.9694
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4662",
+    "nombre": "Estación Meteorológica de Castellón Gregal",
+    "lat": 39.9694,
+    "lon": 0.016110999509692192,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 14.8,
+    "racha_kmh": 23.0,
+    "direccion_grados": 254.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 74.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 26.2,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.009756599552929401,
+     39.96683
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4663",
+    "nombre": "Estación Meteorológica de Castellón Levante",
+    "lat": 39.96683,
+    "lon": 0.009756599552929401,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 13.0,
+    "racha_kmh": 23.0,
+    "direccion_grados": 236.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 56.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 26.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.00694,
+     39.961305
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4664",
+    "nombre": "Estación Meteorológica de Castellón Poniente",
+    "lat": 39.961305,
+    "lon": 0.00694,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 13.7,
+    "racha_kmh": 24.1,
+    "direccion_grados": 250.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 70.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 26.0,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.005,
+     39.950027
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4665",
+    "nombre": "Estación Meteorológica de Castellón Siroco",
+    "lat": 39.950027,
+    "lon": 0.005,
+    "fecha_utc": "2026-10-07T09:40:00+00:00",
+    "velocidad_kmh": 13.0,
+    "racha_kmh": 20.2,
+    "direccion_grados": 211.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 31.0,
+    "antiguedad_min": 15,
+    "temperatura_c": 25.3,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.16612,
+     41.34121
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4752",
+    "nombre": "Estación Meteorológica de Barcelona Sirena",
+    "lat": 41.34121,
+    "lon": 2.16612,
+    "fecha_utc": "2026-10-07T09:51:00+00:00",
+    "velocidad_kmh": 7.6,
+    "racha_kmh": 11.5,
+    "direccion_grados": 269.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 89.0,
+    "antiguedad_min": 4,
+    "temperatura_c": 23.2,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.18235,
+     41.36263
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4753",
+    "nombre": "Estación Meteo. Barcelona Adosado Bocana Norte",
+    "lat": 41.36263,
+    "lon": 2.18235,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 1.8,
+    "racha_kmh": 7.9,
+    "direccion_grados": 256.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 76.0,
+    "antiguedad_min": 5,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.16537,
+     41.31726
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4754",
+    "nombre": "Estación Meteorológica Barcelona Bocana Sur",
+    "lat": 41.31726,
+    "lon": 2.16537,
+    "fecha_utc": "2026-10-07T09:50:00+00:00",
+    "velocidad_kmh": 10.1,
+    "racha_kmh": 14.0,
+    "direccion_grados": 268.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 88.0,
+    "antiguedad_min": 5,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.7004,
+     39.49285
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4801",
+    "nombre": "E. Meteorológica Boya Bahía de Palma SOCIB",
+    "lat": 39.49285,
+    "lon": 2.7004,
+    "fecha_utc": "2026-10-07T09:20:00+00:00",
+    "velocidad_kmh": 23.4,
+    "racha_kmh": 25.2,
+    "direccion_grados": 222.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 42.0,
+    "antiguedad_min": 35,
+    "temperatura_c": null,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.63188,
+     39.63573
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4806",
+    "nombre": "E. Meteorológica de Parc Bit SOCIB",
+    "lat": 39.63573,
+    "lon": 2.63188,
+    "fecha_utc": "2026-10-07T09:38:00+00:00",
+    "velocidad_kmh": 1.4,
+    "racha_kmh": 2.5,
+    "direccion_grados": 145.0,
+    "direccion_cardinal": "SE",
+    "hacia_grados": 325.0,
+    "antiguedad_min": 17,
+    "temperatura_c": 21.9,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     3.39144,
+     39.59432
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4808",
+    "nombre": "E. Meteorológica Mobims Cala Millor SOCIB",
+    "lat": 39.59432,
+    "lon": 3.39144,
+    "fecha_utc": "2026-10-07T09:39:00+00:00",
+    "velocidad_kmh": 10.1,
+    "racha_kmh": 22.3,
+    "direccion_grados": 195.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 15.0,
+    "antiguedad_min": 16,
+    "temperatura_c": 24.9,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.07019,
+     39.89746
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4809",
+    "nombre": "E. Meteorológica Son Bou SOCIB",
+    "lat": 39.89746,
+    "lon": 4.07019,
+    "fecha_utc": "2026-10-07T09:39:00+00:00",
+    "velocidad_kmh": 27.4,
+    "racha_kmh": 28.4,
+    "direccion_grados": 174.0,
+    "direccion_cardinal": "S",
+    "hacia_grados": 354.0,
+    "antiguedad_min": 16,
+    "temperatura_c": 24.9,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.418906,
+     38.734714
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4814",
+    "nombre": "Estación Meteorológica de Formentera",
+    "lat": 38.734714,
+    "lon": 1.418906,
+    "fecha_utc": "2026-10-07T09:54:00+00:00",
+    "velocidad_kmh": 20.9,
+    "racha_kmh": 24.8,
+    "direccion_grados": 274.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 94.0,
+    "antiguedad_min": 1,
+    "temperatura_c": 24.5,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.44733,
+     38.903537
+    ]
+   },
+   "properties": {
+    "fuente": "Puertos del Estado",
+    "id": "4815",
+    "nombre": "Estación Meteorológica de Ibiza",
+    "lat": 38.903537,
+    "lon": 1.44733,
+    "fecha_utc": "2026-10-07T09:55:00+00:00",
+    "velocidad_kmh": 20.2,
+    "racha_kmh": 27.0,
+    "direccion_grados": 250.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 70.0,
+    "antiguedad_min": 0,
+    "temperatura_c": 24.1,
+    "humedad_pct": null,
+    "regla_30": null,
+    "tipo_estacion": "estación de puerto",
+    "red": "Estaciones meteorologicas"
+   }
+  }
+ ]
+}

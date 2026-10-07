@@ -1,0 +1,38 @@
+{
+ "fuente": "AWS Terrain Tiles (terrarium; SRTM, GMTED, ETOPO1 — © Mapzen y colaboradores)",
+ "codificacion": "altura_m = R*256 + G - 32768 (metros enteros; mar = 0)",
+ "zonas": {
+  "peninsula": {
+   "fichero": "relieve_peninsula.png",
+   "ancho": 1329,
+   "alto": 1090,
+   "limites": [
+    [
+     35.003,
+     -9.90967
+    ],
+    [
+     44.20584,
+     4.69116
+    ]
+   ],
+   "metros_por_pixel": 942
+  },
+  "canarias": {
+   "fichero": "relieve_canarias.png",
+   "ancho": 929,
+   "alto": 435,
+   "limites": [
+    [
+     27.5034,
+     -18.30322
+    ],
+    [
+     29.60212,
+     -13.20007
+    ]
+   ],
+   "metros_por_pixel": 537
+  }
+ }
+}

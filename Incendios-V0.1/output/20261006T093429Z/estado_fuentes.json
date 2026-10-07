@@ -1,0 +1,35 @@
+{
+ "generado_utc": "20261006T093429Z",
+ "fuentes": {
+  "NASA FIRMS": {
+   "estado": "ok",
+   "registros": 14,
+   "segundos": 2.3
+  },
+  "EUMETSAT LSA-SAF (SEVIRI)": {
+   "estado": "ok",
+   "registros": 0,
+   "segundos": 6.4
+  },
+  "EFFIS (áreas quemadas)": {
+   "estado": "ok",
+   "registros": 0,
+   "segundos": 19.5
+  },
+  "AEMET (estaciones)": {
+   "estado": "ok",
+   "registros": 745,
+   "segundos": 3.1
+  },
+  "Open-Meteo (capitales)": {
+   "estado": "ok",
+   "registros": 52,
+   "segundos": 0.4
+  },
+  "Open-Meteo (viento en focos)": {
+   "estado": "ok",
+   "registros": 7,
+   "segundos": 0.3
+  }
+ }
+}

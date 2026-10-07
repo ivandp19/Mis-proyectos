@@ -1,0 +1,67 @@
+{
+ "generado_utc": "20261007T144354Z",
+ "fuentes": {
+  "NASA FIRMS": {
+   "estado": "ok",
+   "registros": 23,
+   "segundos": 2.1
+  },
+  "EUMETSAT LSA-SAF (SEVIRI)": {
+   "estado": "ok",
+   "registros": 0,
+   "segundos": 7.5,
+   "vigilancia": {
+    "fecha_utc": "2026-10-07T14:15:00+00:00",
+    "pixeles_espana": 33999,
+    "pct_vigilado": 6.1,
+    "pct_nubes": 73.9,
+    "pct_otros": 20.0
+   }
+  },
+  "EFFIS (áreas quemadas)": {
+   "estado": "ok",
+   "registros": 26,
+   "segundos": 10.1
+  },
+  "Incidencias 112 (oficiales)": {
+   "estado": "ok",
+   "registros": 8,
+   "segundos": 1.4,
+   "detalle_fuentes": {
+    "Andalucía (INFOCA)": 8,
+    "Castilla-La Mancha (FIDIAS)": 0,
+    "Cataluña (Bombers)": 0,
+    "Castilla y León (INFORCYL)": "error: ModuleNotFoundError: No module named 'pyproj'"
+   }
+  },
+  "Riesgo de incendio (AEMET)": {
+   "estado": "ok",
+   "registros": 3,
+   "segundos": 2.4
+  },
+  "Cobertura del suelo (ESA WorldCover)": {
+   "estado": "error",
+   "detalle": "ModuleNotFoundError: No module named 'rasterio'"
+  },
+  "AEMET (estaciones)": {
+   "estado": "ok",
+   "registros": 854,
+   "segundos": 1.7
+  },
+  "Puertos del Estado (costa)": {
+   "estado": "ok",
+   "registros": 104,
+   "segundos": 2.1
+  },
+  "Open-Meteo (capitales)": {
+   "estado": "ok",
+   "registros": 52,
+   "segundos": 0.3
+  },
+  "Open-Meteo (viento en focos)": {
+   "estado": "ok",
+   "registros": 14,
+   "segundos": 0.4
+  }
+ }
+}

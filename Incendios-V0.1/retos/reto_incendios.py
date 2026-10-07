@@ -388,22 +388,6 @@ function ponerBase(k) { if (base) map.removeLayer(base);
 $('#sel-base').onchange = e => ponerBase(e.target.value);
 ponerBase('oscuro');
 
-// Relieve: sombreado de laderas (Esri World Hillshade, sin clave) mezclado en modo "hard-light" sobre el mapa base
-map.createPane('relieve'); map.getPane('relieve').style.zIndex = 250; map.getPane('relieve').style.mixBlendMode = 'hard-light';
-map.getPane('relieve').style.pointerEvents = 'none';
-const capaRelieve = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}',
-  {pane: 'relieve', attribution: 'Relieve © Esri', maxZoom: 16, maxNativeZoom: 16, opacity: .7});
-document.getElementById('menu-capas').insertAdjacentHTML('afterbegin', `
-  <label class="capa"><input type="checkbox" id="c-relieve" checked><span class="nom">Relieve</span><span></span>
-    <span class="ayuda">Sombreado de montañas y valles. En satélite no hace falta.</span></label>
-  <div class="capa" style="cursor:default"><span></span><label class="nom" for="r-relieve">Intensidad del relieve</label><span class="n" id="v-relieve">70 %</span>
-    <span class="ayuda"><input type="range" id="r-relieve" min="10" max="100" step="5" value="70" style="width:100%"></span></div>
-  <div class="separa"></div>`);
-const relieveOn = () => { document.getElementById('c-relieve').checked ? capaRelieve.addTo(map) : map.removeLayer(capaRelieve); };
-document.getElementById('c-relieve').onchange = relieveOn;
-document.getElementById('r-relieve').oninput = e => { capaRelieve.setOpacity(e.target.value / 100); document.getElementById('v-relieve').textContent = e.target.value + ' %'; };
-relieveOn();
-
 // Menú de capas y leyenda desplegables
 const btn = $('#btn-capas'), menu = $('#menu-capas');
 btn.onclick = () => { menu.hidden = !menu.hidden; btn.setAttribute('aria-expanded', String(!menu.hidden)); };
@@ -598,7 +582,7 @@ function render() {
 
 // Eventos: cualquier cambio de filtro repinta
 $('#menu-capas').addEventListener('input', e => {
-  if (e.target.id === 'r-op' || e.target.id === 'r-relieve' || e.target.id === 'c-relieve') return;
+  if (e.target.id === 'r-op') return;
   if (e.target.id === 'r-horas') $('#v-horas').textContent = e.target.value;
   if (e.target.id === 'c-riesgo' || e.target.id === 'sel-dia') pintarRiesgo();
   render(); });

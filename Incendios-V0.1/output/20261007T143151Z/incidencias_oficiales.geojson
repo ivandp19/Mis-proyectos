@@ -1,0 +1,455 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.18083,
+     36.41972
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1068",
+    "lat": 36.41972,
+    "lon": -5.18083,
+    "municipio": "Estepona",
+    "provincia": "MÁLAGA",
+    "tipo": "Incendio forestal",
+    "estado": "activo",
+    "inicio_utc": "2026-10-07T13:38+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": {
+     "VEHICULOS": 1,
+     "GRUPOS_ESPECIALISTAS": 1
+    },
+    "nota": null,
+    "cobertura": {
+     "dominante": "pasto",
+     "fracciones_pct": {
+      "pasto": 67,
+      "bosque": 27,
+      "urbano": 4,
+      "matorral": 2
+     },
+     "combustible_pct": 96,
+     "radio_m": 200
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     235724.0,
+     4487790.0
+    ]
+   },
+   "properties": {
+    "fuente": "INFORCYL",
+    "comunidad": "Castilla y León",
+    "id": "37-264-26",
+    "lat": 4487790.0,
+    "lon": 235724.0,
+    "municipio": "ALBERCA (LA)",
+    "provincia": "SALAMANCA",
+    "tipo": "Incendio forestal",
+    "estado": null,
+    "inicio_utc": "2026-10-07T13:26+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     385580.0,
+     4530391.0
+    ]
+   },
+   "properties": {
+    "fuente": "INFORCYL",
+    "comunidad": "Castilla y León",
+    "id": "40-258-26",
+    "lat": 4530391.0,
+    "lon": 385580.0,
+    "municipio": "MARAZOLEJA",
+    "provincia": "SEGOVIA",
+    "tipo": "Incendio forestal",
+    "estado": null,
+    "inicio_utc": "2026-10-07T13:19+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     338442.0,
+     4520181.0
+    ]
+   },
+   "properties": {
+    "fuente": "INFORCYL",
+    "comunidad": "Castilla y León",
+    "id": "5-214-26",
+    "lat": 4520181.0,
+    "lon": 338442.0,
+    "municipio": "MUÑOGRANDE",
+    "provincia": "AVILA",
+    "tipo": "Incendio forestal",
+    "estado": null,
+    "inicio_utc": "2026-10-07T12:22+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     305494.0,
+     4444499.0
+    ]
+   },
+   "properties": {
+    "fuente": "INFORCYL",
+    "comunidad": "Castilla y León",
+    "id": "5-213-26",
+    "lat": 4444499.0,
+    "lon": 305494.0,
+    "municipio": "CANDELEDA",
+    "provincia": "AVILA",
+    "tipo": "Incendio forestal",
+    "estado": null,
+    "inicio_utc": "2026-10-07T09:40+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.30806,
+     36.37111
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1067",
+    "lat": 36.37111,
+    "lon": -5.30806,
+    "municipio": "Casares",
+    "provincia": "MÁLAGA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-06T19:40+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": {
+     "dominante": "pasto",
+     "fracciones_pct": {
+      "pasto": 51,
+      "bosque": 39,
+      "cultivo": 8,
+      "matorral": 2
+     },
+     "combustible_pct": 92,
+     "radio_m": 200
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.3675,
+     37.44306
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1066",
+    "lat": 37.44306,
+    "lon": -6.3675,
+    "municipio": "Paterna del Campo",
+    "provincia": "HUELVA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-06T17:05+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": {
+     "dominante": "cultivo",
+     "fracciones_pct": {
+      "cultivo": 98,
+      "pasto": 2
+     },
+     "combustible_pct": 2,
+     "radio_m": 200
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.90889,
+     37.66694
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1065",
+    "lat": 37.66694,
+    "lon": -6.90889,
+    "municipio": "Calañas",
+    "provincia": "HUELVA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-06T13:40+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": {
+     "dominante": "matorral",
+     "fracciones_pct": {
+      "matorral": 47,
+      "pasto": 31,
+      "bosque": 22
+     },
+     "combustible_pct": 100,
+     "radio_m": 200
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.36,
+     37.57472
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1064",
+    "lat": 37.57472,
+    "lon": -7.36,
+    "municipio": "El Almendro",
+    "provincia": "HUELVA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-06T13:00+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": {
+     "dominante": "matorral",
+     "fracciones_pct": {
+      "matorral": 86,
+      "bosque": 6,
+      "cultivo": 4,
+      "pasto": 4
+     },
+     "combustible_pct": 96,
+     "radio_m": 200
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.68166,
+     36.64016
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1063",
+    "lat": 36.64016,
+    "lon": -4.68166,
+    "municipio": "Alhaurín el Grande",
+    "provincia": "MÁLAGA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-05T20:44+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": {
+     "dominante": "urbano",
+     "fracciones_pct": {
+      "urbano": 41,
+      "bosque": 33,
+      "pasto": 27
+     },
+     "combustible_pct": 59,
+     "radio_m": 200
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.04834,
+     37.53075
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1062",
+    "lat": 37.53075,
+    "lon": -6.04834,
+    "municipio": "Guillena",
+    "provincia": "SEVILLA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-05T05:54+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": {
+     "dominante": "cultivo",
+     "fracciones_pct": {
+      "cultivo": 73,
+      "bosque": 20,
+      "pasto": 6
+     },
+     "combustible_pct": 27,
+     "radio_m": 200
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.23333,
+     37.31528
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1060",
+    "lat": 37.31528,
+    "lon": -3.23333,
+    "municipio": "Cortes y Graena",
+    "provincia": "GRANADA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T16:50+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": {
+     "dominante": "pasto",
+     "fracciones_pct": {
+      "pasto": 53,
+      "bosque": 45,
+      "cultivo": 2
+     },
+     "combustible_pct": 98,
+     "radio_m": 200
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.20677,
+     36.96593
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1059",
+    "lat": 36.96593,
+    "lon": -2.20677,
+    "municipio": "Níjar",
+    "provincia": "ALMERÍA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T14:40+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null,
+    "cobertura": {
+     "dominante": "pasto",
+     "fracciones_pct": {
+      "pasto": 49,
+      "urbano": 35,
+      "bosque": 16
+     },
+     "combustible_pct": 65,
+     "radio_m": 200
+    }
+   }
+  }
+ ]
+}

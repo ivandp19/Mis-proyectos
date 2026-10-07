@@ -1,0 +1,68 @@
+{
+ "generado_utc": "20261007T161356Z",
+ "fuentes": {
+  "NASA FIRMS": {
+   "estado": "ok",
+   "registros": 67,
+   "segundos": 3.4
+  },
+  "EUMETSAT LSA-SAF (SEVIRI)": {
+   "estado": "ok",
+   "registros": 0,
+   "segundos": 6.9,
+   "vigilancia": {
+    "fecha_utc": "2026-10-07T15:45:00+00:00",
+    "pixeles_espana": 33999,
+    "pct_vigilado": 20.0,
+    "pct_nubes": 60.1,
+    "pct_otros": 19.9
+   }
+  },
+  "EFFIS (áreas quemadas)": {
+   "estado": "ok",
+   "registros": 26,
+   "segundos": 13.3
+  },
+  "Incidencias 112 (oficiales)": {
+   "estado": "ok",
+   "registros": 11,
+   "segundos": 1.2,
+   "detalle_fuentes": {
+    "Andalucía (INFOCA)": 8,
+    "Castilla-La Mancha (FIDIAS)": 0,
+    "Cataluña (Bombers)": 0,
+    "Castilla y León (INFORCYL)": 3
+   }
+  },
+  "Riesgo de incendio (AEMET)": {
+   "estado": "ok",
+   "registros": 3,
+   "segundos": 2.4
+  },
+  "Cobertura del suelo (ESA WorldCover)": {
+   "estado": "ok",
+   "registros": 78,
+   "segundos": 0.1
+  },
+  "AEMET (estaciones)": {
+   "estado": "ok",
+   "registros": 854,
+   "segundos": 2.0
+  },
+  "Puertos del Estado (costa)": {
+   "estado": "ok",
+   "registros": 104,
+   "segundos": 4.6
+  },
+  "Open-Meteo (capitales)": {
+   "estado": "ok",
+   "registros": 52,
+   "segundos": 0.3
+  },
+  "Open-Meteo (viento en focos)": {
+   "estado": "ok",
+   "registros": 20,
+   "segundos": 0.3
+  }
+ }
+}

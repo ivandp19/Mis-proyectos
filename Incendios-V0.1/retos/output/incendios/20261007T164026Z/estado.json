@@ -1,0 +1,45 @@
+{
+  "Incidencias 112 (oficiales)": {
+    "estado": "ok",
+    "registros": 12,
+    "segundos": 9.5,
+    "detalle_fuentes": {
+      "Andalucía (INFOCA)": 8,
+      "Castilla-La Mancha (FIDIAS)": 0,
+      "Cataluña (Bombers)": 0,
+      "Castilla y León (INFORCYL)": 4
+    }
+  },
+  "EFFIS (áreas quemadas)": {
+    "estado": "ok",
+    "registros": 26,
+    "segundos": 10.8
+  },
+  "NASA FIRMS": {
+    "estado": "ok",
+    "registros": 67,
+    "segundos": 11.1
+  },
+  "Riesgo de incendio (AEMET)": {
+    "estado": "ok",
+    "registros": 3,
+    "segundos": 11.5
+  },
+  "EUMETSAT LSA-SAF (SEVIRI)": {
+    "estado": "ok",
+    "registros": 0,
+    "segundos": 16.1,
+    "vigilancia": {
+      "fecha_utc": "2026-10-07T16:15:00+00:00",
+      "pixeles_espana": 33999,
+      "pct_vigilado": 27.5,
+      "pct_nubes": 52.5,
+      "pct_otros": 20.0
+    }
+  },
+  "Cobertura del suelo (ESA WorldCover)": {
+    "estado": "ok",
+    "registros": 79,
+    "segundos": 0.2
+  }
+}

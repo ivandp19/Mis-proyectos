@@ -1,0 +1,179 @@
+{
+  "fuente": "AEMET, mapa de riesgo meteorológico de incendios forestales (© AEMET)",
+  "proyeccion_imagen": "Web Mercator (EPSG:3857); se superpone sin reproyectar",
+  "niveles": [
+    "Muy bajo",
+    "Bajo",
+    "Moderado",
+    "Alto",
+    "Muy alto",
+    "Extremo"
+  ],
+  "colores_rgb": [
+    [
+      70,
+      130,
+      200
+    ],
+    [
+      80,
+      190,
+      230
+    ],
+    [
+      90,
+      200,
+      70
+    ],
+    [
+      240,
+      220,
+      40
+    ],
+    [
+      240,
+      130,
+      20
+    ],
+    [
+      220,
+      30,
+      30
+    ]
+  ],
+  "niveles_png": "gris: valor 0–5 = nivel, 255 = sin dato",
+  "dias": [
+    {
+      "dia": 1,
+      "fecha": "2026-10-08",
+      "validez": "12:00 UTC",
+      "imagen": "riesgo/riesgo_D1.png",
+      "niveles": "riesgo/niveles_D1.png",
+      "limites": [
+        [
+          34.97179,
+          -10.52233
+        ],
+        [
+          44.02057,
+          4.97533
+        ]
+      ],
+      "esquinas_lonlat": [
+        [
+          -10.52233,
+          44.02057
+        ],
+        [
+          4.97533,
+          44.02057
+        ],
+        [
+          4.97533,
+          34.97179
+        ],
+        [
+          -10.52233,
+          34.97179
+        ]
+      ],
+      "nivel_max": "Alto",
+      "reparto_pct": {
+        "Muy bajo": 85.2,
+        "Bajo": 14.1,
+        "Moderado": 0.6,
+        "Alto": 0.0,
+        "Muy alto": 0.0,
+        "Extremo": 0.0
+      }
+    },
+    {
+      "dia": 2,
+      "fecha": "2026-10-09",
+      "validez": "12:00 UTC",
+      "imagen": "riesgo/riesgo_D2.png",
+      "niveles": "riesgo/niveles_D2.png",
+      "limites": [
+        [
+          34.97179,
+          -10.52233
+        ],
+        [
+          44.02057,
+          4.97533
+        ]
+      ],
+      "esquinas_lonlat": [
+        [
+          -10.52233,
+          44.02057
+        ],
+        [
+          4.97533,
+          44.02057
+        ],
+        [
+          4.97533,
+          34.97179
+        ],
+        [
+          -10.52233,
+          34.97179
+        ]
+      ],
+      "nivel_max": "Alto",
+      "reparto_pct": {
+        "Muy bajo": 75.1,
+        "Bajo": 23.8,
+        "Moderado": 1.1,
+        "Alto": 0.0,
+        "Muy alto": 0.0,
+        "Extremo": 0.0
+      }
+    },
+    {
+      "dia": 3,
+      "fecha": "2026-10-10",
+      "validez": "12:00 UTC",
+      "imagen": "riesgo/riesgo_D3.png",
+      "niveles": "riesgo/niveles_D3.png",
+      "limites": [
+        [
+          34.97179,
+          -10.52233
+        ],
+        [
+          44.02057,
+          4.97533
+        ]
+      ],
+      "esquinas_lonlat": [
+        [
+          -10.52233,
+          44.02057
+        ],
+        [
+          4.97533,
+          44.02057
+        ],
+        [
+          4.97533,
+          34.97179
+        ],
+        [
+          -10.52233,
+          34.97179
+        ]
+      ],
+      "nivel_max": "Moderado",
+      "reparto_pct": {
+        "Muy bajo": 69.7,
+        "Bajo": 30.2,
+        "Moderado": 0.1,
+        "Alto": 0.0,
+        "Muy alto": 0.0,
+        "Extremo": 0.0
+      }
+    }
+  ]
+}

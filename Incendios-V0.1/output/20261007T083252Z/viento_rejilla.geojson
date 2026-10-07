@@ -1,0 +1,1409 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.411,
+     43.362
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "43.362,-8.411",
+    "nombre": "A Coruña",
+    "lat": 43.362,
+    "lon": -8.411,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 3.2,
+    "racha_kmh": 7.2,
+    "direccion_grados": 270.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 90.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 17.5,
+    "humedad_pct": 82.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.556,
+     43.012
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "43.012,-7.556",
+    "nombre": "Lugo",
+    "lat": 43.012,
+    "lon": -7.556,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 11.6,
+    "racha_kmh": 23.4,
+    "direccion_grados": 334.0,
+    "direccion_cardinal": "NNO",
+    "hacia_grados": 154.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 14.7,
+    "humedad_pct": 91.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.864,
+     42.336
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.336,-7.864",
+    "nombre": "Ourense",
+    "lat": 42.336,
+    "lon": -7.864,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 1.8,
+    "racha_kmh": 4.3,
+    "direccion_grados": 281.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 101.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.7,
+    "humedad_pct": 92.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -8.644,
+     42.431
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.431,-8.644",
+    "nombre": "Pontevedra",
+    "lat": 42.431,
+    "lon": -8.644,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 9.4,
+    "racha_kmh": 21.2,
+    "direccion_grados": 358.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 178.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 18.3,
+    "humedad_pct": 84.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.849,
+     43.361
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "43.361,-5.849",
+    "nombre": "Oviedo",
+    "lat": 43.361,
+    "lon": -5.849,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 10.5,
+    "racha_kmh": 24.1,
+    "direccion_grados": 266.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 86.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.6,
+    "humedad_pct": 83.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.81,
+     43.462
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "43.462,-3.810",
+    "nombre": "Santander",
+    "lat": 43.462,
+    "lon": -3.81,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 28.6,
+    "racha_kmh": 48.2,
+    "direccion_grados": 247.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 67.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 20.1,
+    "humedad_pct": 67.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.935,
+     43.263
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "43.263,-2.935",
+    "nombre": "Bilbao",
+    "lat": 43.263,
+    "lon": -2.935,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 7.2,
+    "racha_kmh": 16.2,
+    "direccion_grados": 233.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 53.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 20.2,
+    "humedad_pct": 69.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.981,
+     43.318
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "43.318,-1.981",
+    "nombre": "San Sebastián",
+    "lat": 43.318,
+    "lon": -1.981,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 13.5,
+    "racha_kmh": 25.9,
+    "direccion_grados": 236.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 56.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 20.4,
+    "humedad_pct": 69.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.672,
+     42.846
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.846,-2.672",
+    "nombre": "Vitoria",
+    "lat": 42.846,
+    "lon": -2.672,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 10.1,
+    "racha_kmh": 19.1,
+    "direccion_grados": 253.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 73.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.7,
+    "humedad_pct": 77.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.646,
+     42.812
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.812,-1.646",
+    "nombre": "Pamplona",
+    "lat": 42.812,
+    "lon": -1.646,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 5.8,
+    "racha_kmh": 11.9,
+    "direccion_grados": 240.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 60.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.3,
+    "humedad_pct": 89.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.445,
+     42.466
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.466,-2.445",
+    "nombre": "Logroño",
+    "lat": 42.466,
+    "lon": -2.445,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 11.3,
+    "racha_kmh": 21.6,
+    "direccion_grados": 277.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 97.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.9,
+    "humedad_pct": 79.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.889,
+     41.649
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "41.649,-0.889",
+    "nombre": "Zaragoza",
+    "lat": 41.649,
+    "lon": -0.889,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 9.1,
+    "racha_kmh": 22.3,
+    "direccion_grados": 277.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 97.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 18.3,
+    "humedad_pct": 86.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.408,
+     42.136
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.136,-0.408",
+    "nombre": "Huesca",
+    "lat": 42.136,
+    "lon": -0.408,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 6.4,
+    "racha_kmh": 13.0,
+    "direccion_grados": 196.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 16.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.7,
+    "humedad_pct": 92.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.106,
+     40.345
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "40.345,-1.106",
+    "nombre": "Teruel",
+    "lat": 40.345,
+    "lon": -1.106,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 6.1,
+    "racha_kmh": 11.9,
+    "direccion_grados": 220.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 40.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 15.5,
+    "humedad_pct": 82.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.173,
+     41.385
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "41.385,2.173",
+    "nombre": "Barcelona",
+    "lat": 41.385,
+    "lon": 2.173,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 3.5,
+    "racha_kmh": 7.2,
+    "direccion_grados": 246.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 66.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 21.3,
+    "humedad_pct": 89.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.821,
+     41.979
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "41.979,2.821",
+    "nombre": "Girona",
+    "lat": 41.979,
+    "lon": 2.821,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 5.2,
+    "racha_kmh": 13.0,
+    "direccion_grados": 192.0,
+    "direccion_cardinal": "SSO",
+    "hacia_grados": 12.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 20.8,
+    "humedad_pct": 85.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.62,
+     41.617
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "41.617,0.620",
+    "nombre": "Lleida",
+    "lat": 41.617,
+    "lon": 0.62,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 3.3,
+    "racha_kmh": 13.7,
+    "direccion_grados": 283.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 103.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 19.3,
+    "humedad_pct": 90.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.245,
+     41.119
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "41.119,1.245",
+    "nombre": "Tarragona",
+    "lat": 41.119,
+    "lon": 1.245,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 5.1,
+    "racha_kmh": 12.6,
+    "direccion_grados": 4.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 184.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 21.8,
+    "humedad_pct": 80.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.051,
+     39.986
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "39.986,-0.051",
+    "nombre": "Castellón",
+    "lat": 39.986,
+    "lon": -0.051,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 7.8,
+    "racha_kmh": 17.3,
+    "direccion_grados": 236.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 56.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 21.7,
+    "humedad_pct": 66.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.376,
+     39.47
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "39.470,-0.376",
+    "nombre": "Valencia",
+    "lat": 39.47,
+    "lon": -0.376,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 13.2,
+    "racha_kmh": 29.2,
+    "direccion_grados": 225.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 45.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 22.5,
+    "humedad_pct": 63.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.481,
+     38.345
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "38.345,-0.481",
+    "nombre": "Alicante",
+    "lat": 38.345,
+    "lon": -0.481,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 3.2,
+    "racha_kmh": 7.2,
+    "direccion_grados": 243.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 63.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 22.2,
+    "humedad_pct": 76.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.131,
+     37.992
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "37.992,-1.131",
+    "nombre": "Murcia",
+    "lat": 37.992,
+    "lon": -1.131,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 2.5,
+    "racha_kmh": 6.8,
+    "direccion_grados": 315.0,
+    "direccion_cardinal": "NO",
+    "hacia_grados": 135.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 21.4,
+    "humedad_pct": 83.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.65,
+     39.57
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "39.570,2.650",
+    "nombre": "Palma",
+    "lat": 39.57,
+    "lon": 2.65,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 19.6,
+    "racha_kmh": 44.6,
+    "direccion_grados": 238.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 58.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 21.6,
+    "humedad_pct": 86.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.567,
+     42.599
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.599,-5.567",
+    "nombre": "León",
+    "lat": 42.599,
+    "lon": -5.567,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 5.6,
+    "racha_kmh": 15.1,
+    "direccion_grados": 320.0,
+    "direccion_cardinal": "NO",
+    "hacia_grados": 140.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 14.5,
+    "humedad_pct": 69.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.528,
+     42.01
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.010,-4.528",
+    "nombre": "Palencia",
+    "lat": 42.01,
+    "lon": -4.528,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 10.5,
+    "racha_kmh": 20.9,
+    "direccion_grados": 262.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 82.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 13.7,
+    "humedad_pct": 91.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.697,
+     42.344
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "42.344,-3.697",
+    "nombre": "Burgos",
+    "lat": 42.344,
+    "lon": -3.697,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 6.9,
+    "racha_kmh": 13.7,
+    "direccion_grados": 219.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 39.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 13.0,
+    "humedad_pct": 84.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.468,
+     41.764
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "41.764,-2.468",
+    "nombre": "Soria",
+    "lat": 41.764,
+    "lon": -2.468,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 14.8,
+    "racha_kmh": 28.4,
+    "direccion_grados": 269.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 89.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 13.3,
+    "humedad_pct": 85.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.724,
+     41.652
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "41.652,-4.724",
+    "nombre": "Valladolid",
+    "lat": 41.652,
+    "lon": -4.724,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 7.6,
+    "racha_kmh": 18.0,
+    "direccion_grados": 262.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 82.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 14.8,
+    "humedad_pct": 83.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.745,
+     41.503
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "41.503,-5.745",
+    "nombre": "Zamora",
+    "lat": 41.503,
+    "lon": -5.745,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 9.8,
+    "racha_kmh": 18.7,
+    "direccion_grados": 262.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 82.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 14.9,
+    "humedad_pct": 86.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.663,
+     40.97
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "40.970,-5.663",
+    "nombre": "Salamanca",
+    "lat": 40.97,
+    "lon": -5.663,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 9.4,
+    "racha_kmh": 20.9,
+    "direccion_grados": 268.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 88.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 13.7,
+    "humedad_pct": 87.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.109,
+     40.943
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "40.943,-4.109",
+    "nombre": "Segovia",
+    "lat": 40.943,
+    "lon": -4.109,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 6.6,
+    "racha_kmh": 16.2,
+    "direccion_grados": 257.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 77.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 12.0,
+    "humedad_pct": 93.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.7,
+     40.656
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "40.656,-4.700",
+    "nombre": "Ávila",
+    "lat": 40.656,
+    "lon": -4.7,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 8.0,
+    "racha_kmh": 15.5,
+    "direccion_grados": 297.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 117.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 11.8,
+    "humedad_pct": 87.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.704,
+     40.417
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "40.417,-3.704",
+    "nombre": "Madrid",
+    "lat": 40.417,
+    "lon": -3.704,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 7.9,
+    "racha_kmh": 23.0,
+    "direccion_grados": 246.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 66.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 15.5,
+    "humedad_pct": 85.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.167,
+     40.633
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "40.633,-3.167",
+    "nombre": "Guadalajara",
+    "lat": 40.633,
+    "lon": -3.167,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 7.9,
+    "racha_kmh": 21.6,
+    "direccion_grados": 227.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 47.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 14.9,
+    "humedad_pct": 89.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.137,
+     40.07
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "40.070,-2.137",
+    "nombre": "Cuenca",
+    "lat": 40.07,
+    "lon": -2.137,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 10.5,
+    "racha_kmh": 18.0,
+    "direccion_grados": 286.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 106.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 14.6,
+    "humedad_pct": 84.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.027,
+     39.863
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "39.863,-4.027",
+    "nombre": "Toledo",
+    "lat": 39.863,
+    "lon": -4.027,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 12.0,
+    "racha_kmh": 25.2,
+    "direccion_grados": 263.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 83.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.2,
+    "humedad_pct": 88.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.927,
+     38.985
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "38.985,-3.927",
+    "nombre": "Ciudad Real",
+    "lat": 38.985,
+    "lon": -3.927,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 10.7,
+    "racha_kmh": 23.4,
+    "direccion_grados": 250.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 70.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.1,
+    "humedad_pct": 87.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.858,
+     38.994
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "38.994,-1.858",
+    "nombre": "Albacete",
+    "lat": 38.994,
+    "lon": -1.858,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 9.4,
+    "racha_kmh": 19.4,
+    "direccion_grados": 268.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 88.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 16.3,
+    "humedad_pct": 84.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.372,
+     39.475
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "39.475,-6.372",
+    "nombre": "Cáceres",
+    "lat": 39.475,
+    "lon": -6.372,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 6.1,
+    "racha_kmh": 15.8,
+    "direccion_grados": 273.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 93.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 15.3,
+    "humedad_pct": 89.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.97,
+     38.879
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "38.879,-6.970",
+    "nombre": "Badajoz",
+    "lat": 38.879,
+    "lon": -6.97,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 9.0,
+    "racha_kmh": 20.5,
+    "direccion_grados": 275.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 95.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 17.6,
+    "humedad_pct": 83.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.945,
+     37.261
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "37.261,-6.945",
+    "nombre": "Huelva",
+    "lat": 37.261,
+    "lon": -6.945,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 11.2,
+    "racha_kmh": 21.2,
+    "direccion_grados": 339.0,
+    "direccion_cardinal": "NNO",
+    "hacia_grados": 159.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 19.0,
+    "humedad_pct": 80.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.984,
+     37.389
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "37.389,-5.984",
+    "nombre": "Sevilla",
+    "lat": 37.389,
+    "lon": -5.984,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 0.5,
+    "racha_kmh": 3.6,
+    "direccion_grados": 315.0,
+    "direccion_cardinal": "NO",
+    "hacia_grados": 135.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 19.3,
+    "humedad_pct": 80.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.779,
+     37.888
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "37.888,-4.779",
+    "nombre": "Córdoba",
+    "lat": 37.888,
+    "lon": -4.779,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 5.1,
+    "racha_kmh": 16.2,
+    "direccion_grados": 219.0,
+    "direccion_cardinal": "SO",
+    "hacia_grados": 39.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 19.2,
+    "humedad_pct": 87.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.784,
+     37.779
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "37.779,-3.784",
+    "nombre": "Jaén",
+    "lat": 37.779,
+    "lon": -3.784,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 4.3,
+    "racha_kmh": 11.5,
+    "direccion_grados": 265.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 85.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 18.7,
+    "humedad_pct": 73.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.599,
+     37.177
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "37.177,-3.599",
+    "nombre": "Granada",
+    "lat": 37.177,
+    "lon": -3.599,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 3.3,
+    "racha_kmh": 8.3,
+    "direccion_grados": 264.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 84.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 17.1,
+    "humedad_pct": 78.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.464,
+     36.834
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "36.834,-2.464",
+    "nombre": "Almería",
+    "lat": 36.834,
+    "lon": -2.464,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 0.8,
+    "racha_kmh": 7.9,
+    "direccion_grados": 243.0,
+    "direccion_cardinal": "OSO",
+    "hacia_grados": 63.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 22.6,
+    "humedad_pct": 79.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.421,
+     36.721
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "36.721,-4.421",
+    "nombre": "Málaga",
+    "lat": 36.721,
+    "lon": -4.421,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 5.2,
+    "racha_kmh": 13.3,
+    "direccion_grados": 286.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 106.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 22.1,
+    "humedad_pct": 72.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.289,
+     36.527
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "36.527,-6.289",
+    "nombre": "Cádiz",
+    "lat": 36.527,
+    "lon": -6.289,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 10.3,
+    "racha_kmh": 19.8,
+    "direccion_grados": 299.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 119.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 21.2,
+    "humedad_pct": 82.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -16.252,
+     28.464
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "28.464,-16.252",
+    "nombre": "Santa Cruz de Tenerife",
+    "lat": 28.464,
+    "lon": -16.252,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 11.5,
+    "racha_kmh": 25.6,
+    "direccion_grados": 2.0,
+    "direccion_cardinal": "N",
+    "hacia_grados": 182.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 23.5,
+    "humedad_pct": 72.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -15.436,
+     28.124
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "28.124,-15.436",
+    "nombre": "Las Palmas de Gran Canaria",
+    "lat": 28.124,
+    "lon": -15.436,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 7.2,
+    "racha_kmh": 14.8,
+    "direccion_grados": 342.0,
+    "direccion_cardinal": "NNO",
+    "hacia_grados": 162.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 23.4,
+    "humedad_pct": 74.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.321,
+     35.889
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "35.889,-5.321",
+    "nombre": "Ceuta",
+    "lat": 35.889,
+    "lon": -5.321,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 15.5,
+    "racha_kmh": 28.4,
+    "direccion_grados": 267.0,
+    "direccion_cardinal": "O",
+    "hacia_grados": 87.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 21.5,
+    "humedad_pct": 74.0,
+    "regla_30": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.938,
+     35.292
+    ]
+   },
+   "properties": {
+    "fuente": "Open-Meteo",
+    "id": "35.292,-2.938",
+    "nombre": "Melilla",
+    "lat": 35.292,
+    "lon": -2.938,
+    "fecha_utc": "2026-10-07T08:30:00+00:00",
+    "velocidad_kmh": 11.6,
+    "racha_kmh": 27.0,
+    "direccion_grados": 286.0,
+    "direccion_cardinal": "ONO",
+    "hacia_grados": 106.0,
+    "antiguedad_min": 3,
+    "temperatura_c": 23.3,
+    "humedad_pct": 74.0,
+    "regla_30": false
+   }
+  }
+ ]
+}

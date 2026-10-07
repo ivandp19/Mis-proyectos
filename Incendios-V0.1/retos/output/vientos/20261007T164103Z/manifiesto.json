@@ -1,0 +1,35 @@
+{
+  "reto": "vientos",
+  "generado_utc": "2026-10-07T16:41:03+00:00",
+  "parametros": {},
+  "capas": {
+    "viento": {
+      "fichero": "viento.geojson",
+      "tipo": "geojson",
+      "registros": 1010,
+      "por_fuente": {
+        "AEMET": 854,
+        "Puertos del Estado": 104,
+        "Open-Meteo": 52
+      },
+      "descripcion": "Viento por estación. velocidad_kmh, racha_kmh; direccion_grados = de dónde viene; hacia_grados = hacia dónde empuja; tipo_dato: observación/modelo."
+    }
+  },
+  "estado": {
+    "Open-Meteo (capitales)": {
+      "estado": "ok",
+      "registros": 52,
+      "segundos": 0.4
+    },
+    "AEMET (estaciones)": {
+      "estado": "ok",
+      "registros": 854,
+      "segundos": 1.8
+    },
+    "Puertos del Estado (costa)": {
+      "estado": "ok",
+      "registros": 104,
+      "segundos": 2.6
+    }
+  }
+}

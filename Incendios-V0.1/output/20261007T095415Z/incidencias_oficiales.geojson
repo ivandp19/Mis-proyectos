@@ -1,0 +1,385 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.16565,
+     41.37852
+    ]
+   },
+   "properties": {
+    "fuente": "Bombers de la Generalitat",
+    "comunidad": "Cataluña",
+    "id": "1144524",
+    "lat": 41.37852,
+    "lon": 1.16565,
+    "municipio": "Montblanc",
+    "provincia": null,
+    "tipo": "Incendi vegetació urbana",
+    "estado": "aviso sin fase",
+    "inicio_utc": "2026-10-07T09:33+00:00",
+    "fin_utc": null,
+    "actualizado_utc": "2026-10-07T09:34+00:00",
+    "superficie_ha": null,
+    "medios": {
+     "vehículos": 0
+    },
+    "nota": "Bombers ha abierto el aviso pero aún no le ha asignado fase (0 vehículos registrados). No confirma que el incendio siga activo."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.30806,
+     36.37111
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1067",
+    "lat": 36.37111,
+    "lon": -5.30806,
+    "municipio": "Casares",
+    "provincia": "MÁLAGA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-06T19:40+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.3675,
+     37.44306
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1066",
+    "lat": 37.44306,
+    "lon": -6.3675,
+    "municipio": "Paterna del Campo",
+    "provincia": "HUELVA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-06T17:05+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.90889,
+     37.66694
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1065",
+    "lat": 37.66694,
+    "lon": -6.90889,
+    "municipio": "Calañas",
+    "provincia": "HUELVA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-06T13:40+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.36,
+     37.57472
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1064",
+    "lat": 37.57472,
+    "lon": -7.36,
+    "municipio": "El Almendro",
+    "provincia": "HUELVA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-06T13:00+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.68166,
+     36.64016
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1063",
+    "lat": 36.64016,
+    "lon": -4.68166,
+    "municipio": "Alhaurín el Grande",
+    "provincia": "MÁLAGA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-05T20:44+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.04834,
+     37.53075
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1062",
+    "lat": 37.53075,
+    "lon": -6.04834,
+    "municipio": "Guillena",
+    "provincia": "SEVILLA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-05T05:54+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.23333,
+     37.31528
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1060",
+    "lat": 37.31528,
+    "lon": -3.23333,
+    "municipio": "Cortes y Graena",
+    "provincia": "GRANADA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T16:50+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.20677,
+     36.96593
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1059",
+    "lat": 36.96593,
+    "lon": -2.20677,
+    "municipio": "Níjar",
+    "provincia": "ALMERÍA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T14:40+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.52639,
+     37.43889
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1061",
+    "lat": 37.43889,
+    "lon": -6.52639,
+    "municipio": "Villalba del Alcor",
+    "provincia": "HUELVA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T14:08+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.00718,
+     36.87235
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1058",
+    "lat": 36.87235,
+    "lon": -2.00718,
+    "municipio": "Níjar",
+    "provincia": "ALMERÍA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T14:04+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.72167,
+     37.47694
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1057",
+    "lat": 37.47694,
+    "lon": -5.72167,
+    "municipio": "Carmona",
+    "provincia": "SEVILLA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T13:28+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.79085,
+     36.21114
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1055",
+    "lat": 36.21114,
+    "lon": -5.79085,
+    "municipio": "Tarifa",
+    "provincia": "CÁDIZ",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T11:16+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.18146,
+     37.82038
+    ]
+   },
+   "properties": {
+    "fuente": "INFOCA",
+    "comunidad": "Andalucía",
+    "id": "1056",
+    "lat": 37.82038,
+    "lon": -5.18146,
+    "municipio": "Hornachuelos",
+    "provincia": "CÓRDOBA",
+    "tipo": "Incendio forestal",
+    "estado": "extinguido",
+    "inicio_utc": "2026-10-04T10:17+00:00",
+    "fin_utc": null,
+    "actualizado_utc": null,
+    "superficie_ha": null,
+    "medios": null,
+    "nota": null
+   }
+  }
+ ]
+}

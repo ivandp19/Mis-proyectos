@@ -1,0 +1,925 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.37181,
+     41.4202
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "MODIS",
+    "satelite": "Terra",
+    "lat": 41.4202,
+    "lon": -1.37181,
+    "fecha_utc": "2026-10-07T09:49:00+00:00",
+    "confianza": "baja",
+    "confianza_bruta": "6",
+    "frp_mw": 8.69,
+    "dia_noche": "dia",
+    "resolucion_m": 1000,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "41.400,-1.400",
+     "nombre": null,
+     "lat": 41.4,
+     "lon": -1.4,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 17.3,
+     "racha_kmh": 46.1,
+     "direccion_grados": 287.0,
+     "direccion_cardinal": "ONO",
+     "hacia_grados": 107.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 19.5,
+     "humedad_pct": 50.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.96796,
+     39.64728
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "MODIS",
+    "satelite": "Terra",
+    "lat": 39.64728,
+    "lon": -6.96796,
+    "fecha_utc": "2026-10-07T09:49:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "61",
+    "frp_mw": 6.68,
+    "dia_noche": "dia",
+    "resolucion_m": 1000,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "39.600,-7.000",
+     "nombre": null,
+     "lat": 39.6,
+     "lon": -7.0,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 9.1,
+     "racha_kmh": 18.4,
+     "direccion_grados": 326.0,
+     "direccion_cardinal": "NO",
+     "hacia_grados": 146.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 24.4,
+     "humedad_pct": 45.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -7.45476,
+     39.6209
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "MODIS",
+    "satelite": "Terra",
+    "lat": 39.6209,
+    "lon": -7.45476,
+    "fecha_utc": "2026-10-07T09:49:00+00:00",
+    "confianza": "baja",
+    "confianza_bruta": "46",
+    "frp_mw": 9.43,
+    "dia_noche": "dia",
+    "resolucion_m": 1000,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "39.600,-7.500",
+     "nombre": null,
+     "lat": 39.6,
+     "lon": -7.5,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 6.7,
+     "racha_kmh": 15.8,
+     "direccion_grados": 324.0,
+     "direccion_cardinal": "NO",
+     "hacia_grados": 144.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 24.8,
+     "humedad_pct": 44.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.61175,
+     38.25338
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "MODIS",
+    "satelite": "Terra",
+    "lat": 38.25338,
+    "lon": -1.61175,
+    "fecha_utc": "2026-10-07T09:49:00+00:00",
+    "confianza": "baja",
+    "confianza_bruta": "25",
+    "frp_mw": 10.1,
+    "dia_noche": "dia",
+    "resolucion_m": 1000,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "38.300,-1.600",
+     "nombre": null,
+     "lat": 38.3,
+     "lon": -1.6,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 15.0,
+     "racha_kmh": 27.4,
+     "direccion_grados": 291.0,
+     "direccion_cardinal": "ONO",
+     "hacia_grados": 111.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 25.1,
+     "humedad_pct": 41.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.05025,
+     37.37804
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "MODIS",
+    "satelite": "Terra",
+    "lat": 37.37804,
+    "lon": -5.05025,
+    "fecha_utc": "2026-10-07T09:49:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "66",
+    "frp_mw": 14.07,
+    "dia_noche": "dia",
+    "resolucion_m": 1000,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "37.400,-5.100",
+     "nombre": null,
+     "lat": 37.4,
+     "lon": -5.1,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 13.7,
+     "racha_kmh": 26.3,
+     "direccion_grados": 272.0,
+     "direccion_cardinal": "O",
+     "hacia_grados": 92.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 26.0,
+     "humedad_pct": 42.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.47442,
+     40.24611
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-21",
+    "lat": 40.24611,
+    "lon": -3.47442,
+    "fecha_utc": "2026-10-07T03:10:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 4.1,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "40.200,-3.500",
+     "nombre": null,
+     "lat": 40.2,
+     "lon": -3.5,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 9.4,
+     "racha_kmh": 21.2,
+     "direccion_grados": 252.0,
+     "direccion_cardinal": "OSO",
+     "hacia_grados": 72.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 20.0,
+     "humedad_pct": 61.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.74463,
+     39.93803
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-21",
+    "lat": 39.93803,
+    "lon": -3.74463,
+    "fecha_utc": "2026-10-07T03:10:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.85,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "39.900,-3.700",
+     "nombre": null,
+     "lat": 39.9,
+     "lon": -3.7,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 13.7,
+     "racha_kmh": 25.2,
+     "direccion_grados": 275.0,
+     "direccion_cardinal": "O",
+     "hacia_grados": 95.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 20.0,
+     "humedad_pct": 65.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.47353,
+     40.43236
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-20",
+    "lat": 40.43236,
+    "lon": -3.47353,
+    "fecha_utc": "2026-10-07T02:26:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.32,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "40.400,-3.500",
+     "nombre": null,
+     "lat": 40.4,
+     "lon": -3.5,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 4.1,
+     "racha_kmh": 13.3,
+     "direccion_grados": 225.0,
+     "direccion_cardinal": "SO",
+     "hacia_grados": 45.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 21.7,
+     "humedad_pct": 52.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.47607,
+     40.24458
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-20",
+    "lat": 40.24458,
+    "lon": -3.47607,
+    "fecha_utc": "2026-10-07T02:26:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.48,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "40.200,-3.500",
+     "nombre": null,
+     "lat": 40.2,
+     "lon": -3.5,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 9.4,
+     "racha_kmh": 21.2,
+     "direccion_grados": 252.0,
+     "direccion_cardinal": "OSO",
+     "hacia_grados": 72.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 20.0,
+     "humedad_pct": 61.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.74664,
+     39.93861
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-20",
+    "lat": 39.93861,
+    "lon": -3.74664,
+    "fecha_utc": "2026-10-07T02:26:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.99,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "39.900,-3.700",
+     "nombre": null,
+     "lat": 39.9,
+     "lon": -3.7,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 13.7,
+     "racha_kmh": 25.2,
+     "direccion_grados": 275.0,
+     "direccion_cardinal": "O",
+     "hacia_grados": 95.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 20.0,
+     "humedad_pct": 65.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.90376,
+     36.96652
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-20",
+    "lat": 36.96652,
+    "lon": -1.90376,
+    "fecha_utc": "2026-10-07T02:26:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 1.56,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "37.000,-1.900",
+     "nombre": null,
+     "lat": 37.0,
+     "lon": -1.9,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 22.7,
+     "racha_kmh": 40.3,
+     "direccion_grados": 228.0,
+     "direccion_cardinal": "SO",
+     "hacia_grados": 48.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 27.6,
+     "humedad_pct": 47.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.86764,
+     37.36064
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-20",
+    "lat": 37.36064,
+    "lon": -5.86764,
+    "fecha_utc": "2026-10-07T02:26:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.94,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "37.400,-5.900",
+     "nombre": null,
+     "lat": 37.4,
+     "lon": -5.9,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 12.0,
+     "racha_kmh": 22.7,
+     "direccion_grados": 279.0,
+     "direccion_cardinal": "O",
+     "hacia_grados": 99.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 28.3,
+     "humedad_pct": 34.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.4231,
+     36.1774
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-20",
+    "lat": 36.1774,
+    "lon": -5.4231,
+    "fecha_utc": "2026-10-07T02:26:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.68,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "36.200,-5.400",
+     "nombre": null,
+     "lat": 36.2,
+     "lon": -5.4,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 18.6,
+     "racha_kmh": 34.9,
+     "direccion_grados": 279.0,
+     "direccion_cardinal": "O",
+     "hacia_grados": 99.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 25.3,
+     "humedad_pct": 54.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.42287,
+     36.17634
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "Suomi NPP",
+    "lat": 36.17634,
+    "lon": -5.42287,
+    "fecha_utc": "2026-10-07T02:09:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.88,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "36.200,-5.400",
+     "nombre": null,
+     "lat": 36.2,
+     "lon": -5.4,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 18.6,
+     "racha_kmh": 34.9,
+     "direccion_grados": 279.0,
+     "direccion_cardinal": "O",
+     "hacia_grados": 99.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 25.3,
+     "humedad_pct": 54.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.47569,
+     40.24523
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "Suomi NPP",
+    "lat": 40.24523,
+    "lon": -3.47569,
+    "fecha_utc": "2026-10-07T02:06:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 3.63,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "40.200,-3.500",
+     "nombre": null,
+     "lat": 40.2,
+     "lon": -3.5,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 9.4,
+     "racha_kmh": 21.2,
+     "direccion_grados": 252.0,
+     "direccion_cardinal": "OSO",
+     "hacia_grados": 72.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 20.0,
+     "humedad_pct": 61.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.745,
+     39.93721
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "Suomi NPP",
+    "lat": 39.93721,
+    "lon": -3.745,
+    "fecha_utc": "2026-10-07T02:06:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 1.11,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "39.900,-3.700",
+     "nombre": null,
+     "lat": 39.9,
+     "lon": -3.7,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 13.7,
+     "racha_kmh": 25.2,
+     "direccion_grados": 275.0,
+     "direccion_cardinal": "O",
+     "hacia_grados": 95.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 20.0,
+     "humedad_pct": 65.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.79163,
+     37.23658
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "Suomi NPP",
+    "lat": 37.23658,
+    "lon": -1.79163,
+    "fecha_utc": "2026-10-07T02:06:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.28,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "37.200,-1.800",
+     "nombre": null,
+     "lat": 37.2,
+     "lon": -1.8,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 15.3,
+     "racha_kmh": 27.4,
+     "direccion_grados": 172.0,
+     "direccion_cardinal": "S",
+     "hacia_grados": 352.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 28.5,
+     "humedad_pct": 49.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.90653,
+     36.96669
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "Suomi NPP",
+    "lat": 36.96669,
+    "lon": -1.90653,
+    "fecha_utc": "2026-10-07T02:06:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 1.29,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "37.000,-1.900",
+     "nombre": null,
+     "lat": 37.0,
+     "lon": -1.9,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 22.7,
+     "racha_kmh": 40.3,
+     "direccion_grados": 228.0,
+     "direccion_cardinal": "SO",
+     "hacia_grados": 48.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 27.6,
+     "humedad_pct": 47.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.67368,
+     37.3595
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "Suomi NPP",
+    "lat": 37.3595,
+    "lon": -6.67368,
+    "fecha_utc": "2026-10-07T02:06:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.7,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "37.400,-6.700",
+     "nombre": null,
+     "lat": 37.4,
+     "lon": -6.7,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 13.7,
+     "racha_kmh": 26.3,
+     "direccion_grados": 300.0,
+     "direccion_cardinal": "ONO",
+     "hacia_grados": 120.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 26.0,
+     "humedad_pct": 45.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -6.67253,
+     37.35897
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-21",
+    "lat": 37.35897,
+    "lon": -6.67253,
+    "fecha_utc": "2026-10-07T01:30:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.65,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "37.400,-6.700",
+     "nombre": null,
+     "lat": 37.4,
+     "lon": -6.7,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 13.7,
+     "racha_kmh": 26.3,
+     "direccion_grados": 300.0,
+     "direccion_cardinal": "ONO",
+     "hacia_grados": 120.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 26.0,
+     "humedad_pct": 45.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.9039,
+     36.9675
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-21",
+    "lat": 36.9675,
+    "lon": -1.9039,
+    "fecha_utc": "2026-10-07T01:30:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 1.73,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "37.000,-1.900",
+     "nombre": null,
+     "lat": 37.0,
+     "lon": -1.9,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 22.7,
+     "racha_kmh": 40.3,
+     "direccion_grados": 228.0,
+     "direccion_cardinal": "SO",
+     "hacia_grados": 48.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 27.6,
+     "humedad_pct": 47.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.42142,
+     36.17879
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "VIIRS",
+    "satelite": "NOAA-21",
+    "lat": 36.17879,
+    "lon": -5.42142,
+    "fecha_utc": "2026-10-07T01:30:00+00:00",
+    "confianza": "media",
+    "confianza_bruta": "nominal",
+    "frp_mw": 0.76,
+    "dia_noche": "noche",
+    "resolucion_m": 375,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "36.200,-5.400",
+     "nombre": null,
+     "lat": 36.2,
+     "lon": -5.4,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 18.6,
+     "racha_kmh": 34.9,
+     "direccion_grados": 279.0,
+     "direccion_cardinal": "O",
+     "hacia_grados": 99.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 25.3,
+     "humedad_pct": 54.0,
+     "regla_30": false
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.22434,
+     38.58708
+    ]
+   },
+   "properties": {
+    "fuente": "NASA FIRMS",
+    "sensor": "MODIS",
+    "satelite": "Aqua",
+    "lat": 38.58708,
+    "lon": -5.22434,
+    "fecha_utc": "2026-10-06T15:52:00+00:00",
+    "confianza": "baja",
+    "confianza_bruta": "48",
+    "frp_mw": 14.33,
+    "dia_noche": "dia",
+    "resolucion_m": 1000,
+    "viento_local": {
+     "fuente": "Open-Meteo",
+     "id": "38.600,-5.200",
+     "nombre": null,
+     "lat": 38.6,
+     "lon": -5.2,
+     "fecha_utc": "2026-10-07T14:30:00+00:00",
+     "velocidad_kmh": 15.6,
+     "racha_kmh": 31.0,
+     "direccion_grados": 296.0,
+     "direccion_cardinal": "ONO",
+     "hacia_grados": 116.0,
+     "antiguedad_min": 14,
+     "temperatura_c": 22.0,
+     "humedad_pct": 50.0,
+     "regla_30": false
+    }
+   }
+  }
+ ]
+}

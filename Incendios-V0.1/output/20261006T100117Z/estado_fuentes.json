@@ -1,0 +1,42 @@
+{
+ "generado_utc": "20261006T100117Z",
+ "fuentes": {
+  "NASA FIRMS": {
+   "estado": "ok",
+   "registros": 14,
+   "segundos": 2.2
+  },
+  "EUMETSAT LSA-SAF (SEVIRI)": {
+   "estado": "ok",
+   "registros": 0,
+   "segundos": 6.6,
+   "vigilancia": {
+    "fecha_utc": "2026-10-06T09:30:00+00:00",
+    "pixeles_espana": 33999,
+    "pct_vigilado": 0.7,
+    "pct_nubes": 79.1,
+    "pct_otros": 20.2
+   }
+  },
+  "EFFIS (áreas quemadas)": {
+   "estado": "ok",
+   "registros": 27,
+   "segundos": 9.1
+  },
+  "AEMET (estaciones)": {
+   "estado": "ok",
+   "registros": 745,
+   "segundos": 1.8
+  },
+  "Open-Meteo (capitales)": {
+   "estado": "ok",
+   "registros": 52,
+   "segundos": 0.2
+  },
+  "Open-Meteo (viento en focos)": {
+   "estado": "ok",
+   "registros": 7,
+   "segundos": 0.3
+  }
+ }
+}
