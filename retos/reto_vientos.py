@@ -1,48 +1,92 @@
 #!/usr/bin/env python3
 """
-MAPAS INTERACTIVOS DE LOS RETOS (Incendios y Vientos)
+RETO VIENTOS — crawling (crawl4ai) y datos
 
-Genera un único HTML autocontenido por reto, con el mismo estilo "sala de operaciones" del
-visor (barra de mando, mapa a la izquierda, parte a la derecha), pero adaptado a los datos
-de cada reto. Lee SOLO los ficheros que escribe `guardar()`: no hace peticiones de datos.
+Lo usa `reto_vientos.ipynb`, y también funciona solo desde la terminal o importado
+desde otra aplicación. Dos funciones, una por paso:
 
-    crear_mapa("incendios", carpeta)  ->  <carpeta>/mapa_incendios.html
-    crear_mapa("vientos",   carpeta)  ->  <carpeta>/mapa_vientos.html
+    crawlear()  → paso 1: descarga
+    guardar()   → paso 2: escribe los ficheros (y `comun.comprobar` los verifica)
+    mapa()      → paso 2: genera el mapa del reto leyendo solo esos ficheros (sin `comun`)
 
-Misma firma que `comun.crear_mapa`: en `reto_incendios.py` y `reto_vientos.py` basta con
-cambiar `from comun import ... crear_mapa ...` por `from mapas import crear_mapa`.
+Recoge el viento en España y lo deja en un fichero con un esquema común:
 
-    python retos/mapas.py incendios [carpeta]
-    python retos/mapas.py vientos   [carpeta]
+| Fuente | Qué es | Clave |
+|---|---|---|
+| AEMET OpenData | ~855 estaciones automáticas (observación) | `AEMET_API_KEY` |
+| Puertos del Estado (iMar / PORTUS) | ~100 boyas, mareógrafos y estaciones de puerto (observación) | no |
+| Open-Meteo | 52 capitales de provincia (modelo, respaldo) | no |
+
+Salida: `viento.geojson` (un punto por estación, propiedad `fuente`),
+`estado.json` y `manifiesto.json`. Además genera el mapa del reto en la misma
+carpeta (`mapa_vientos.html`).
+
+Cada lectura lleva velocidad y racha (km/h), dirección de donde viene
+(`direccion_grados`) y hacia donde empuja (`hacia_grados`), temperatura,
+humedad, `regla_30` (>30 °C, <30 %, >30 km/h) y `antiguedad_min`.
+
+    python retos/reto_vientos.py
 """
 from __future__ import annotations
 
-import base64
+import argparse
+import asyncio
 import json
 import sys
 import webbrowser
 from pathlib import Path
 
-SALIDA = Path(__file__).resolve().parent / "output"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from comun import coleccion, escribir_json, manifiesto, nueva_carpeta  # noqa: E402
 
-TITULOS = {"incendios": ("Incendios", "Focos, áreas quemadas, incidencias 112 y riesgo"),
-           "vientos": ("Vientos", "Estaciones AEMET, Puertos del Estado y Open-Meteo")}
+from incendios.pipeline import ejecutar, resumen  # noqa: E402
+from incendios.viento import aemet, openmeteo, puertos  # noqa: E402
+
+RETO = "vientos"
 
 
-# --------------------------------------------------------------------------- datos
-def _json(ruta: Path, defecto):
+async def crawlear() -> dict:
+    """Las tres fuentes en paralelo. Una fuente caída no detiene las demás."""
+    estado: dict = {}
+    estaciones, costa, rejilla = await asyncio.gather(
+        ejecutar(estado, "AEMET (estaciones)", aemet.obtener_estaciones()),
+        ejecutar(estado, "Puertos del Estado (costa)", puertos.obtener_estaciones()),
+        ejecutar(estado, "Open-Meteo (capitales)", openmeteo.obtener_rejilla()),
+    )
+    tipo = lambda lista, t: [{**l, "tipo_dato": t} for l in lista]
+    return {"lecturas": tipo(estaciones, "observación") + tipo(costa, "observación") + tipo(rejilla, "modelo"),
+            "estado": estado}
+
+
+def guardar(resultado: dict, carpeta: Path) -> Path:
+    lecturas = resultado["lecturas"]
+    escribir_json(carpeta / "viento.geojson", coleccion(lecturas, "viento"), compacto=True)
+    escribir_json(carpeta / "estado.json", resultado["estado"])
+    por_fuente = {}
+    for l in lecturas:
+        por_fuente[l["fuente"]] = por_fuente.get(l["fuente"], 0) + 1
+    capas = {"viento": {"fichero": "viento.geojson", "tipo": "geojson", "registros": len(lecturas),
+                        "por_fuente": por_fuente,
+                        "descripcion": "Viento por estación. velocidad_kmh, racha_kmh; direccion_grados = de dónde viene; "
+                                       "hacia_grados = hacia dónde empuja; tipo_dato: observación/modelo."}}
+    return manifiesto(carpeta, RETO, capas, resultado["estado"], {})
+
+
+# --------------------------------------------------------------------------- mapa
+# El mapa de este reto vive aquí: no depende de `comun`. Lee solo los ficheros que
+# escribe `guardar()` y produce un HTML autocontenido (necesita internet para Leaflet y los tiles).
+def _leer_json(ruta: Path, defecto):
     try:
         return json.loads(ruta.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return defecto
 
 
-def _features(ruta: Path) -> list[dict]:
-    """GeoJSON -> lista plana de propiedades, con lat/lon (y `_geom` si no es un punto)."""
+def _propiedades(ruta: Path) -> list[dict]:
+    """GeoJSON -> propiedades de cada registro, con lat/lon (o `_geom` si no es un punto)."""
     salida = []
-    for f in _json(ruta, {}).get("features", []):
-        p = dict(f.get("properties") or {})
-        g = f.get("geometry")
+    for f in _leer_json(ruta, {}).get("features", []):
+        p, g = dict(f.get("properties") or {}), f.get("geometry")
         if g and g.get("type") == "Point":
             p["lon"], p["lat"] = g["coordinates"][:2]
         elif g:
@@ -51,52 +95,36 @@ def _features(ruta: Path) -> list[dict]:
     return salida
 
 
-def _carpeta_reciente(reto: str) -> Path:
-    base = SALIDA / reto
+def _carpeta_reciente() -> Path:
+    base = Path(__file__).resolve().parent / "output" / RETO
     carpetas = sorted(p for p in base.glob("*") if p.is_dir()) if base.exists() else []
     if not carpetas:
-        raise FileNotFoundError(f"No hay datos de «{reto}» en {base}: ejecuta antes el reto.")
+        raise FileNotFoundError(f"No hay datos de «{RETO}» en {base}: ejecuta antes el reto.")
     return carpetas[-1]
 
 
-def _datos_incendios(c: Path) -> dict:
-    riesgo = _json(c / "riesgo" / "riesgo.json", {})
-    for d in riesgo.get("dias", []):  # la imagen va incrustada: el HTML se puede mover o enviar
-        img = c / d["imagen"]
-        d["img"] = "data:image/png;base64," + base64.b64encode(img.read_bytes()).decode() if img.exists() else None
-    return {"focos": _features(c / "focos.geojson"), "areas": _features(c / "areas_quemadas.geojson"),
-            "incidencias": _features(c / "incidencias_112.geojson"), "riesgo": riesgo}
+def _datos(c: Path) -> dict:
+    return {"lecturas": _propiedades(c / "viento.geojson")}
 
 
-def _datos_vientos(c: Path) -> dict:
-    return {"lecturas": _features(c / "viento.geojson")}
-
-
-def crear_mapa(reto: str, carpeta: Path | None = None, abrir: bool = False) -> Path:
-    """Escribe `mapa_<reto>.html` en la carpeta del reto (la más reciente si no se indica)."""
-    if reto not in TITULOS:
-        raise ValueError(f"Reto desconocido: {reto!r} (usa 'incendios' o 'vientos')")
-    carpeta = Path(carpeta) if carpeta else _carpeta_reciente(reto)
-    datos = _datos_incendios(carpeta) if reto == "incendios" else _datos_vientos(carpeta)
-    datos.update(reto=reto, carpeta=carpeta.name, estado=_json(carpeta / "estado.json", {}),
-                 manifiesto=_json(carpeta / "manifiesto.json", {}))
-    titulo, sub = TITULOS[reto]
-    cuerpo, js = (CUERPO_INCENDIOS, JS_INCENDIOS) if reto == "incendios" else (CUERPO_VIENTOS, JS_VIENTOS)
-    html = (PLANTILLA.replace("__TITULO__", titulo).replace("__SUB__", sub).replace("__CUERPO__", cuerpo)
-            .replace("__JS_COMUN__", JS_COMUN).replace("__JS__", js)
+def mapa(carpeta: Path | None = None, abrir: bool = False) -> Path:
+    """Mapa interactivo de este reto (`mapa_vientos.html`) en su carpeta; la más reciente si no se indica."""
+    carpeta = Path(carpeta) if carpeta else _carpeta_reciente()
+    datos = _datos(carpeta)
+    datos.update(reto=RETO, carpeta=carpeta.name, estado=_leer_json(carpeta / "estado.json", {}),
+                 manifiesto=_leer_json(carpeta / "manifiesto.json", {}))
+    html = (PLANTILLA.replace("__CUERPO__", CUERPO).replace("__JS_COMUN__", JS_COMUN).replace("__JS__", JS)
             .replace("__DATOS__", json.dumps(datos, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")))
-    destino = carpeta / f"mapa_{reto}.html"
+    destino = carpeta / "mapa_vientos.html"
     destino.write_text(html, encoding="utf-8")
     if abrir:
         webbrowser.open(destino.as_uri())
     return destino
 
-
-# --------------------------------------------------------------------------- plantilla
 PLANTILLA = r"""<!doctype html>
 <html lang="es"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mapa __TITULO__ · España</title>
+<title>Mapa Vientos · España</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
 <style>
@@ -206,7 +234,7 @@ select,.boton { cursor:pointer; }
 </style></head>
 <body><div class="app">
   <header class="barra">
-    <div class="marca"><h1>__TITULO__ <span>·</span> España</h1><span class="sello" id="sello">—</span></div>
+    <div class="marca"><h1>Vientos <span>·</span> España</h1><span class="sello" id="sello">—</span></div>
     <div class="mando">
       <label class="campo" for="sel-base">Mapa
         <select id="sel-base"><option value="oscuro">Oscuro</option><option value="claro">Claro</option><option value="satelite">Satélite</option></select></label>
@@ -215,7 +243,7 @@ select,.boton { cursor:pointer; }
   </header>
   <main class="cuerpo">
     <div class="mapa-zona">
-      <div id="mapa" role="region" aria-label="Mapa interactivo de __SUB__"></div>
+      <div id="mapa" role="region" aria-label="Mapa interactivo de Estaciones AEMET, Puertos del Estado y Open-Meteo"></div>
       __CUERPO__
       <div class="leyenda"><button type="button" class="ley-btn" id="btn-leyenda" aria-expanded="true" aria-controls="leyenda-cuerpo">Leyenda</button>
         <div id="leyenda-cuerpo" aria-live="polite"></div></div>
@@ -232,7 +260,6 @@ __JS__
 </script></body></html>
 """
 
-# --------------------------------------------------------------------------- JS común
 JS_COMUN = r"""
 const D = JSON.parse(document.getElementById('datos').textContent);
 const $ = s => document.querySelector(s);
@@ -290,180 +317,7 @@ const popup = (t, de, filas) => `<div class="pop"><h4>${esc(t)}</h4><div class="
 function encuadrar(puntos) { if (puntos.length > 1) map.fitBounds(L.latLngBounds(puntos).pad(.15), {maxZoom: 8}); }
 """
 
-# --------------------------------------------------------------------------- INCENDIOS
-CUERPO_INCENDIOS = r"""
-      <div class="desplegable" id="menu-capas" hidden>
-        <label class="capa"><input type="checkbox" id="c-riesgo"><span class="nom">Riesgo previsto</span>
-          <select id="sel-dia" aria-label="Día de la previsión"></select>
-          <span class="ayuda" id="ayuda-riesgo">Previsión oficial de AEMET del riesgo meteorológico de incendio (3 días).</span></label>
-        <div class="capa" style="cursor:default"><span></span><label class="nom" for="r-op">Opacidad del riesgo</label><span class="n" id="v-op">65 %</span>
-          <span class="ayuda"><input type="range" id="r-op" min="10" max="100" step="5" value="65" style="width:100%"></span></div>
-        <label class="capa"><input type="checkbox" id="c-areas" checked><span class="nom">Áreas quemadas EFFIS</span><span class="n" id="n-areas"></span>
-          <span class="ayuda">Perímetros publicados o revisados en la ventana.</span></label>
-        <label class="capa"><input type="checkbox" id="c-112" checked><span class="nom">Incidencias 112</span><span class="n" id="n-112"></span>
-          <span class="ayuda">Incendios de INFOCA, FIDIAS, Bombers e INFORCYL.</span></label>
-        <label class="capa"><input type="checkbox" id="c-focos" checked><span class="nom">Focos de calor</span><span class="n" id="n-focos"></span>
-          <span class="ayuda">Detecciones por satélite. El tamaño indica la potencia radiativa (FRP).</span></label>
-        <div class="separa"></div>
-        <div class="sub"><div class="tit">Focos de calor</div>
-          <div id="sensores"></div>
-          <div class="fila-sel"><label for="sel-conf">Confianza mínima</label>
-            <select id="sel-conf"><option value="0">Todas</option><option value="1">Media o alta</option><option value="2">Solo alta</option></select></div>
-          <div class="fila-sel"><label for="r-horas">Últimas <b id="v-horas">24</b> h</label><span></span></div>
-          <input type="range" id="r-horas" min="1" max="24" step="1" value="24" aria-label="Ventana de tiempo de los focos">
-          <label class="op"><input type="checkbox" id="c-solo-veg"><span>Solo vegetación natural (≥ 50 %)</span><span class="n" id="n-veg"></span></label>
-        </div>
-        <div class="separa"></div>
-        <div class="sub"><div class="tit">Incidencias 112</div>
-          <div class="fila-sel"><label for="sel-estado">Estado</label>
-            <select id="sel-estado"><option value="">Todos</option><option value="vivos">Solo en curso (no extinguidos)</option><option value="extinguido">Solo extinguidos</option></select></div>
-          <div class="fila-sel"><label for="sel-ccaa">Comunidad</label><select id="sel-ccaa"><option value="">Todas</option></select></div>
-        </div>
-      </div>
-"""
-
-# El panel lateral del reto va fuera de .mapa-zona: se inyecta tras el mapa desde JS para no tocar la plantilla.
-JS_INCENDIOS = r"""
-document.querySelector('.cuerpo').insertAdjacentHTML('beforeend', `
-  <aside class="parte" aria-label="Parte de situación">
-    <div><h2 id="r-titulo">Situación de incendios</h2><p class="subt" id="r-sub"></p></div>
-    <div class="cifras" id="cifras"></div>
-    <section id="sec-riesgo" hidden><h3><span>Riesgo previsto (AEMET)</span><span id="h-riesgo"></span></h3><div id="riesgo-zona"></div></section>
-    <section><h3><span>Incidencias 112</span><span id="h-112"></span></h3><ol class="lista" id="lista-112"></ol></section>
-    <section><h3><span>Focos de calor</span><span id="h-focos"></span></h3><ol class="lista" id="lista-focos"></ol></section>
-    <section><h3><span>Áreas quemadas</span><span id="h-areas"></span></h3><ol class="lista" id="lista-areas"></ol></section>
-    <section><h3><span>Estado de las fuentes</span></h3><ul class="fuentes" id="lista-fuentes"></ul></section>
-  </aside>`);
-$('#creditos').textContent = 'NASA FIRMS · EUMETSAT LSA SAF · Copernicus EFFIS · AEMET · INFOCA · INFOCAM · Bombers · INFORCYL · cobertura © ESA WorldCover';
-
-const CONF = {alta: 2, media: 1, baja: 0}, COL_CONF = {alta: '#e5484d', media: '#f08c2e', baja: '#e6c229'};
-const COL_RIESGO = (D.riesgo.colores_rgb || [[0,160,0],[140,200,40],[250,220,0],[250,140,0],[220,30,30],[120,0,0]]).map(c => `rgb(${c.join(',')})`);
-const NIV = D.riesgo.niveles || ['Muy bajo','Bajo','Moderado','Alto','Muy alto','Extremo'];
-const ahora = REF.getTime();
-const horasDe = s => (ahora - new Date(s).getTime()) / 36e5;
-const sensorDe = f => (f.sensor || (/seviri|meteosat/i.test(f.satelite || '') ? 'SEVIRI' : '?')).toString().toUpperCase();
-const colorEstado = e => /activo/i.test(e || '') ? '#e5484d' : /estabiliz/i.test(e || '') ? '#f08c2e' : /control/i.test(e || '') ? '#e6c229'
-  : /extingu/i.test(e || '') ? '#46a758' : '#a89f92';
-const vivo = e => !/extingu/i.test(e || '');
-
-// Grupos de capa
-const gAreas = L.featureGroup().addTo(map), g112 = L.featureGroup().addTo(map), gFocos = L.featureGroup().addTo(map);
-let capaRiesgo = null;
-
-// Controles dinámicos
-const sensores = [...new Set(D.focos.map(sensorDe))].sort();
-$('#sensores').innerHTML = sensores.length ? sensores.map(s =>
-  `<label class="op"><input type="checkbox" class="c-sensor" value="${esc(s)}" checked><span>${esc(s)}</span><span class="n">${D.focos.filter(f => sensorDe(f) === s).length}</span></label>`).join('')
-  : '<p class="vacio">Sin focos en la ventana.</p>';
-const maxH = Math.max(1, Math.ceil(Math.max(0, ...D.focos.map(f => horasDe(f.fecha_utc)).filter(isFinite))));
-$('#r-horas').max = Math.max(maxH, 1); $('#r-horas').value = Math.max(maxH, 1); $('#v-horas').textContent = $('#r-horas').value;
-for (const c of [...new Set(D.incidencias.map(i => i.comunidad).filter(Boolean))].sort()) $('#sel-ccaa').insertAdjacentHTML('beforeend', `<option>${esc(c)}</option>`);
-$('#n-veg').textContent = D.focos.filter(f => f.cobertura && f.cobertura.combustible_pct >= 50).length;
-if (!D.focos.some(f => f.cobertura)) { $('#c-solo-veg').disabled = true; $('#n-veg').textContent = 'sin dato'; }
-
-// Riesgo (imagen georreferenciada, Web Mercator: Leaflet la coloca sin reproyectar)
-const dias = (D.riesgo.dias || []).filter(d => d.img);
-if (!dias.length) { $('#c-riesgo').disabled = true; $('#ayuda-riesgo').textContent = 'Sin previsión de riesgo en esta ejecución (falta la clave de AEMET o falló la fuente).'; }
-$('#sel-dia').innerHTML = dias.map((d, i) => `<option value="${i}">${esc(d.fecha)}</option>`).join('');
-function pintarRiesgo() {
-  if (capaRiesgo) { map.removeLayer(capaRiesgo); capaRiesgo = null; }
-  if (!dias.length || !chk('c-riesgo')) return;
-  const d = dias[+val('sel-dia')], [[s, o], [n, e]] = d.limites;
-  capaRiesgo = L.imageOverlay(d.img, [[s, o], [n, e]], {opacity: val('r-op') / 100, interactive: false}).addTo(map);
-  capaRiesgo.bringToBack(); if (base) base.bringToBack();
-}
-$('#r-op').oninput = e => { $('#v-op').textContent = e.target.value + ' %'; capaRiesgo && capaRiesgo.setOpacity(e.target.value / 100); };
-
-function panelRiesgo() {
-  const sec = $('#sec-riesgo'); sec.hidden = !dias.length; if (!dias.length) return;
-  const d = dias[+val('sel-dia')]; $('#h-riesgo').textContent = d.fecha;
-  $('#riesgo-zona').innerHTML = `<div class="reparto" role="img" aria-label="Reparto del territorio por nivel de riesgo">` +
-    NIV.map((n, i) => `<span style="width:${d.reparto_pct[n] || 0}%;background:${COL_RIESGO[i]}" title="${esc(n)}: ${d.reparto_pct[n] || 0} %"></span>`).join('') + `</div>` +
-    `<div class="fila" style="display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.78rem">` +
-    NIV.map((n, i) => `<span><i style="display:inline-block;width:9px;height:9px;border-radius:2px;background:${COL_RIESGO[i]};margin-right:4px"></i>${esc(n)} ${num(d.reparto_pct[n], 1)} %</span>`).join('') + `</div>` +
-    `<p class="nota">Nivel máximo previsto: <b>${esc(d.nivel_max)}</b>. ${esc(d.validez || '')}</p>`;
-}
-
-function render() {
-  gAreas.clearLayers(); g112.clearLayers(); gFocos.clearLayers();
-  const sens = new Set([...document.querySelectorAll('.c-sensor:checked')].map(i => i.value));
-  const minConf = +val('sel-conf'), horas = +val('r-horas'), soloVeg = chk('c-solo-veg');
-  const focos = D.focos.filter(f => f.lat != null && sens.has(sensorDe(f)) && (CONF[f.confianza] ?? 0) >= minConf &&
-    horasDe(f.fecha_utc) <= horas + 1e-6 && (!soloVeg || (f.cobertura && f.cobertura.combustible_pct >= 50)));
-  const inc = D.incidencias.filter(i => i.lat != null && (val('sel-estado') === '' || (val('sel-estado') === 'vivos' ? vivo(i.estado) : !vivo(i.estado))) &&
-    (val('sel-ccaa') === '' || i.comunidad === val('sel-ccaa')));
-  const areas = D.areas.filter(a => a._geom);
-
-  const itemsA = areas.slice().sort((a, b) => (b.area_ha || 0) - (a.area_ha || 0)).map(a => {
-    const col = a.novedad === 'nueva' ? '#e5484d' : '#f97316';
-    const g = L.geoJSON(a._geom, {style: {color: col, weight: 2, fillColor: col, fillOpacity: .35}})
-      .bindPopup(popup(a.municipio || 'Área quemada', `${a.provincia || ''} · EFFIS`, [
-        ['Superficie', num(a.area_ha, 1) + ' ha'], ['Incendio', fmtFecha(a.fecha_incendio)], ['Novedad', a.novedad],
-        ['Natura 2000', a.pct_natura2000 != null ? num(a.pct_natura2000, 0) + ' %' : null]]));
-    g.on('mouseover', () => g.setStyle({weight: 3.5, fillOpacity: .55})); g.on('mouseout', () => g.setStyle({weight: 2, fillOpacity: .35}));
-    if (chk('c-areas')) g.addTo(gAreas);
-    return {color: col, l1: a.municipio || '—', l2: `${a.provincia || ''} · ${a.novedad || ''}`, dato: num(a.area_ha, 0) + ' ha',
-      ir: () => { map.flyToBounds(g.getBounds().pad(.6), {maxZoom: 12, duration: .6}); map.once('moveend', () => g.openPopup(g.getBounds().getCenter())); }};
-  });
-
-  const itemsI = inc.slice().sort((a, b) => (b.inicio_utc || '').localeCompare(a.inicio_utc || '')).map(i => {
-    const col = colorEstado(i.estado), est = i.estado || 'aviso sin fase';
-    const m = L.marker([i.lat, i.lon], {icon: L.divIcon({className: 'marca-112' + (vivo(i.estado) ? ' activo' : ''), iconSize: [22, 22],
-      html: `<span style="border-color:${col};color:${col}">112</span>`})})
-      .bindPopup(popup(i.municipio || 'Incidencia', `${i.provincia || ''} · ${i.comunidad || ''}`, [
-        ['Estado', est, vivo(i.estado) ? 'alerta' : ''], ['Inicio', fmtFecha(i.inicio_utc)], ['Superficie', i.superficie_ha != null ? num(i.superficie_ha, 1) + ' ha' : null],
-        ['Suelo', i.cobertura && i.cobertura.dominante], ['Fuente', i.fuente]]));
-    if (chk('c-112')) m.addTo(g112);
-    return {color: col, l1: i.municipio || '—', l2: `${i.provincia || ''} · ${est}`, dato: fmtFecha(i.inicio_utc).replace(' UTC', ''), ir: () => ir(m.getLatLng(), m, 11)};
-  });
-
-  const itemsF = focos.slice().sort((a, b) => (b.frp_mw || 0) - (a.frp_mw || 0)).map(f => {
-    const col = COL_CONF[f.confianza] || '#a89f92', r = 5 + Math.min(10, Math.sqrt(Math.max(f.frp_mw || 0, 0)) * 1.6);
-    const m = L.circleMarker([f.lat, f.lon], {radius: r, color: '#1b1714', weight: 1, fillColor: col, fillOpacity: .85})
-      .bindPopup(popup(`Foco · ${sensorDe(f)}`, `${f.satelite || ''} · confianza ${f.confianza || '—'}`, [
-        ['Detectado', fmtFecha(f.fecha_utc)], ['Potencia (FRP)', f.frp_mw != null ? num(f.frp_mw, 1) + ' MW' : null],
-        ['Suelo dominante', f.cobertura && f.cobertura.dominante], ['Vegetación natural', f.cobertura ? num(f.cobertura.combustible_pct, 0) + ' %' : null],
-        ['Coordenadas', `${num(f.lat, 4)}, ${num(f.lon, 4)}`]]));
-    m.on('mouseover', () => m.setStyle({weight: 3, color: '#fff'})); m.on('mouseout', () => m.setStyle({weight: 1, color: '#1b1714'}));
-    if (chk('c-focos')) m.addTo(gFocos);
-    return {color: col, l1: `${f.satelite || sensorDe(f)} · ${fmtFecha(f.fecha_utc).replace(' UTC', '')}`,
-      l2: f.cobertura ? `${f.cobertura.dominante} · ${num(f.cobertura.combustible_pct, 0)} % veg.` : sensorDe(f),
-      dato: f.frp_mw != null ? num(f.frp_mw, 1) + ' MW' : '—', ir: () => ir(m.getLatLng(), m, 10)};
-  });
-
-  // Paneles y cifras
-  $('#n-focos').textContent = focos.length; $('#n-112').textContent = inc.length; $('#n-areas').textContent = areas.length;
-  $('#h-focos').textContent = focos.length; $('#h-112').textContent = inc.length; $('#h-areas').textContent = areas.length;
-  const frpMax = focos.reduce((m, f) => Math.max(m, f.frp_mw || 0), 0), ha = areas.reduce((s, a) => s + (a.area_ha || 0), 0);
-  cifras([{v: inc.filter(i => vivo(i.estado)).length, e: 'incidencias 112 en curso', alerta: inc.some(i => vivo(i.estado))},
-          {v: focos.length, e: `focos de calor · últimas ${horas} h`},
-          {v: num(ha, 0), u: 'ha', e: `áreas quemadas (${areas.length})`},
-          {v: num(frpMax, 1), u: 'MW', e: 'foco más potente'}]);
-  $('#r-sub').textContent = `${D.focos.length} focos · ${D.areas.length} áreas · ${D.incidencias.length} incidencias en los datos`;
-  lista('#lista-112', itemsI.slice(0, 40), 'Sin incidencias con estos filtros.');
-  lista('#lista-focos', itemsF.slice(0, 40), 'Sin focos con estos filtros.');
-  lista('#lista-areas', itemsA.slice(0, 40), 'Sin áreas quemadas.');
-  panelRiesgo(); fuentes(D.estado);
-  ley([{t: 'Focos (color = confianza, tamaño = potencia)', f: [dot(COL_CONF.alta, 'Alta'), dot(COL_CONF.media, 'Media'), dot(COL_CONF.baja, 'Baja')]},
-       {t: 'Incidencias 112', f: [dot('#e5484d', 'Activo', 'cuadro'), dot('#f08c2e', 'Estabilizado', 'cuadro'), dot('#e6c229', 'Controlado', 'cuadro'),
-                                  dot('#46a758', 'Extinguido', 'cuadro'), dot('#a89f92', 'Aviso sin fase', 'cuadro')]},
-       {t: 'Áreas quemadas', f: [dot('#e5484d', 'Nueva', 'cuadro'), dot('#f97316', 'Actualizada', 'cuadro')]}]
-      .concat(chk('c-riesgo') && dias.length ? [{t: 'Riesgo AEMET', f: NIV.map((n, i) => dot(COL_RIESGO[i], n, 'cuadro'))}] : []));
-}
-
-// Eventos: cualquier cambio de filtro repinta
-$('#menu-capas').addEventListener('input', e => {
-  if (e.target.id === 'r-op') return;
-  if (e.target.id === 'r-horas') $('#v-horas').textContent = e.target.value;
-  if (e.target.id === 'c-riesgo' || e.target.id === 'sel-dia') pintarRiesgo();
-  render(); });
-$('#menu-capas').addEventListener('change', e => { if (e.target.id === 'sel-dia') pintarRiesgo(); });
-pintarRiesgo(); render();
-encuadrar([...D.focos, ...D.incidencias].filter(p => p.lat != null).map(p => [p.lat, p.lon]).concat([[43.8, -9.3], [36, 3.3]]));
-"""
-
-# --------------------------------------------------------------------------- VIENTOS
-CUERPO_VIENTOS = r"""
+CUERPO = r"""
       <div class="desplegable" id="menu-capas" hidden>
         <div class="sub"><div class="tit">Fuentes</div>
           <label class="op"><input type="checkbox" id="c-aemet" checked><span>Estaciones AEMET</span><span class="n" id="n-aemet"></span></label>
@@ -490,7 +344,7 @@ CUERPO_VIENTOS = r"""
       </div>
 """
 
-JS_VIENTOS = r"""
+JS = r"""
 document.querySelector('.cuerpo').insertAdjacentHTML('beforeend', `
   <aside class="parte" aria-label="Parte de situación">
     <div><h2>Viento en España</h2><p class="subt" id="r-sub"></p></div>
@@ -584,7 +438,15 @@ encuadrar([[43.8, -9.3], [36, 3.3]]);
 """
 
 
+
+def main() -> None:
+    argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter).parse_args()
+    resultado = asyncio.run(crawlear())
+    carpeta = nueva_carpeta(RETO)
+    guardar(resultado, carpeta)
+    print(f"\nReto VIENTOS · datos guardados en {carpeta}\n\n{resumen(resultado['estado'])}")
+    print(f"Mapa: {mapa(carpeta)}")
+
+
 if __name__ == "__main__":
-    if len(sys.argv) < 2 or sys.argv[1] not in TITULOS:
-        sys.exit(__doc__)
-    print(crear_mapa(sys.argv[1], Path(sys.argv[2]) if len(sys.argv) > 2 else None))
+    main()
