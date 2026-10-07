@@ -340,7 +340,7 @@ select,.boton { cursor:pointer; }
     <div class="marca"><h1>Incendios <span>·</span> España</h1><span class="sello" id="sello">—</span></div>
     <div class="mando">
       <label class="campo" for="sel-base">Mapa
-        <select id="sel-base"><option value="oscuro">Oscuro</option><option value="claro">Claro</option><option value="satelite">Satélite</option></select></label>
+        <select id="sel-base"><option value="oscuro">Oscuro</option><option value="claro">Claro</option><option value="calles">Calles</option><option value="satelite">Satélite</option></select></label>
       <button type="button" class="boton" id="btn-capas" aria-expanded="false" aria-controls="menu-capas">Capas y filtros <span aria-hidden="true">▼</span></button>
     </div>
   </header>
@@ -375,15 +375,16 @@ const REF = (() => { const m = /^(\d{4})(\d\d)(\d\d)T(\d\d)(\d\d)(\d\d)Z$/.exec(
   return m ? new Date(Date.UTC(+m[1], m[2]-1, +m[3], +m[4], +m[5], +m[6])) : new Date(); })();
 $('#sello').textContent = 'Datos de ' + fmtFecha(REF.toISOString());
 
-const BASES = {
-  oscuro:   ['https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', '© OpenStreetMap · © CARTO'],
-  claro:    ['https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', '© OpenStreetMap · © CARTO'],
-  satelite: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', 'Imagery © Esri'],
+const BASES = {   // sin API key
+  oscuro:   ['https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', 'Tiles © Esri', 16],
+  claro:    ['https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', 'Tiles © Esri', 16],
+  calles:   ['https://tile.openstreetmap.org/{z}/{x}/{y}.png', '© OpenStreetMap', 19],
+  satelite: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', 'Imagery © Esri', 18],
 };
 const map = L.map('mapa', {preferCanvas: true, minZoom: 4, zoomSnap: .5}).setView([39.9, -3.7], 6);
 let base = null;
 function ponerBase(k) { if (base) map.removeLayer(base);
-  base = L.tileLayer(BASES[k][0], {attribution: BASES[k][1], subdomains: 'abcd', maxZoom: 18}).addTo(map); base.bringToBack(); }
+  base = L.tileLayer(BASES[k][0], {attribution: BASES[k][1], maxZoom: BASES[k][2]}).addTo(map); base.bringToBack(); }
 $('#sel-base').onchange = e => ponerBase(e.target.value);
 ponerBase('oscuro');
 
