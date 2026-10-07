@@ -9,7 +9,7 @@ el resto del proyecto:
     <destino>/reto_vientos/     reto_vientos.py   · reto_vientos.ipynb   · incendios/ · LEEME.md
 
 El paquete `incendios/` (el código que descarga cada fuente) se copia de tu proyecto Incendios-V0.0.
-No se copian `.env`, claves, `__pycache__` ni `.DS_Store`: las claves se escriben en el notebook o en
+No se copian `.env` (claves), `__pycache__` ni `.DS_Store`: las claves se escriben en el notebook o en
 el `.env` de quien reciba la carpeta.
 
 Ejecútalo UNA vez, desde cualquier sitio:
@@ -31,7 +31,11 @@ from pathlib import Path
 
 AQUI = Path(__file__).resolve().parent
 RETOS = ("incendios", "vientos")
-IGNORAR = shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store", ".env", ".env.*", ".ipynb_checkpoints", ".git")
+COMUN = ("__pycache__", "*.pyc", ".DS_Store", ".env", ".ipynb_checkpoints", ".git")
+# El reto de vientos no usa la cobertura del suelo (ESA WorldCover): no hace falta arrastrar esos .tif.
+IGNORAR = {"incendios": shutil.ignore_patterns(*COMUN), "vientos": shutil.ignore_patterns(*COMUN, "cobertura_*")}
+# Dependencias que solo necesita el reto de incendios (SEVIRI, cobertura, INFORCYL).
+SOLO_INCENDIOS = ("h5py", "rasterio", "pyproj")
 
 
 def localizar() -> Path | None:
@@ -70,16 +74,23 @@ def main() -> int:
             origen = AQUI / f"reto_{reto}" / nombre
             if origen.exists():
                 shutil.copy(origen, carpeta / nombre)
-        shutil.copytree(proyecto / "incendios", carpeta / "incendios", ignore=IGNORAR)
+        shutil.copytree(proyecto / "incendios", carpeta / "incendios", ignore=IGNORAR[reto])
         for extra in a.extra:
             if (proyecto / extra).is_dir():
-                shutil.copytree(proyecto / extra, carpeta / extra, ignore=IGNORAR)
+                shutil.copytree(proyecto / extra, carpeta / extra, ignore=IGNORAR[reto])
             else:
                 print(f"  aviso: no existe {proyecto / extra}")
+        req = proyecto / "requirements.txt"
+        if req.exists():  # mismas versiones que tu proyecto, sin lo que este reto no usa
+            lineas = [l for l in req.read_text(encoding="utf-8").splitlines()
+                      if reto == "incendios" or not l.strip().lower().startswith(SOLO_INCENDIOS)]
+            (carpeta / "requirements.txt").write_text("\n".join(lineas) + "\n", encoding="utf-8")
+        if (proyecto / ".env.example").exists():
+            shutil.copy(proyecto / ".env.example", carpeta / ".env.example")
         (carpeta / "LEEME.md").write_text((carpeta / "LEEME.md").read_text(encoding="utf-8") + f"""
 ## Esta carpeta es independiente
 Lleva dentro todo lo necesario (`incendios/`): no depende de ningún otro proyecto. Requisitos:
-`pip install crawl4ai pandas` (y lo que pida `incendios/`). Las claves (AEMET, LSA-SAF) se escriben en
+`pip install -r requirements.txt pandas`. Las claves (AEMET, LSA-SAF) se escriben en
 la primera celda del notebook o en un `.env` dentro de esta carpeta.
 """, encoding="utf-8")
         # Prueba de aislamiento: importar el reto desde su carpeta, con el entorno limpio de rutas del proyecto.
