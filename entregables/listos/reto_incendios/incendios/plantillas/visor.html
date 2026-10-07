@@ -1,0 +1,306 @@
+<meta charset="utf-8">
+<title>Visor Incendios España</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/*__LEAFLET_CSS__*/
+
+/* Sala de operaciones de una sola vista, oscura por decisión (se usa con poca luz
+   y el mapa manda): barra de mando arriba, mapa a la izquierda, parte a la derecha. */
+:root {
+  color-scheme: dark;
+  --noche: #13110f;          /* fondo de la página */
+  --panel: #1c1916;          /* superficies */
+  --panel-alto: #26221e;     /* superficies elevadas: menú, popups */
+  --linea: #3a352f;
+  --texto: #eee8de;
+  --tenue: #a89f92;
+  --mar: #0e171c;
+  --tierra: #2c2823;
+  --tierra-vecina: #1d1b18;
+  --limite: #6e655a;
+  --brasa: #ec8a3c;          /* acento: interacción y selección */
+  --alto: #e5484d;
+  --medio: #f08c2e;
+  --bajo: #e6c229;
+  --ok: #46a758;
+  --frio: #4c9be8;
+  --sin-dato: #7d7468;
+  --f-titular: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-texto: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-dato: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --radio: 6px;
+}
+html, body { height: 100%; }
+body { background: var(--noche); color: var(--texto); font: 15px/1.45 var(--f-texto); }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--brasa); outline-offset: 2px; }
+
+.app { height: 100%; display: grid; grid-template-rows: auto 1fr auto; }
+
+/* --- Barra de mando --------------------------------------------------------- */
+.barra { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 10px 20px; padding: 10px 16px; border-bottom: 1px solid var(--linea); background: var(--panel); }
+.marca { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; min-width: 0; }
+.marca h1 { margin: 0; font: 700 1.55rem/1 var(--f-titular); letter-spacing: .02em; text-transform: uppercase; }
+.marca h1 span { color: var(--brasa); }
+.sello { font: 400 .78rem/1.3 var(--f-dato); color: var(--tenue); }
+.mando { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.campo { display: flex; align-items: center; gap: 8px; font: 600 .72rem/1 var(--f-titular);
+  letter-spacing: .08em; text-transform: uppercase; color: var(--tenue); }
+select, .boton { background: var(--panel-alto); border: 1px solid var(--linea); border-radius: var(--radio);
+  padding: 7px 10px; font-size: .9rem; min-height: 36px; }
+select { cursor: pointer; }
+.boton { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.boton:hover, select:hover { border-color: var(--limite); }
+.boton[aria-expanded="true"] { border-color: var(--brasa); color: var(--brasa); }
+.boton .flecha { transition: transform .15s; font-size: .7rem; }
+.boton[aria-expanded="true"] .flecha { transform: rotate(180deg); }
+
+/* --- Cuerpo ----------------------------------------------------------------- */
+.cuerpo { display: grid; grid-template-columns: minmax(0, 1fr) 370px; min-height: 0; }
+.mapa-zona { position: relative; min-height: 0; }
+#mapa, #vista3d { position: absolute; inset: 0; background: var(--mar); }
+#vista3d { z-index: 1001; }          /* por encima de los controles de Leaflet (1000) */
+#vista3d canvas { display: block; width: 100%; height: 100%; }
+.aviso3d { position: absolute; left: 50%; top: 12px; transform: translateX(-50%); z-index: 2;
+  background: rgba(28,25,22,.92); border: 1px solid var(--linea); border-radius: var(--radio);
+  padding: 6px 12px; font-size: .8rem; color: var(--tenue); white-space: nowrap; max-width: calc(100% - 24px);
+  overflow: hidden; text-overflow: ellipsis; }
+.leaflet-container { font-family: var(--f-texto); background: var(--mar); }
+
+/* Menú desplegable de capas: flota sobre el mapa. */
+.desplegable { position: absolute; top: 10px; right: 10px; z-index: 1003; width: min(340px, calc(100% - 20px));
+  max-height: calc(100% - 20px); overflow-y: auto; background: var(--panel-alto); border: 1px solid var(--linea);
+  border-radius: var(--radio); box-shadow: 0 12px 32px rgba(0,0,0,.45); padding: 6px 0; }
+.capa { display: grid; grid-template-columns: 18px 1fr auto; align-items: center; gap: 4px 10px;
+  padding: 7px 14px; cursor: pointer; }
+.capa:hover { background: rgba(255,255,255,.03); }
+.capa input[type="checkbox"] { accent-color: var(--brasa); width: 16px; height: 16px; margin: 0; }
+.capa .nom { font-weight: 600; }
+.capa .ayuda { grid-column: 2 / -1; font-size: .76rem; color: var(--tenue); line-height: 1.3; }
+.capa .n { font: .76rem var(--f-dato); color: var(--tenue); }
+.capa select { padding: 2px 6px; min-height: 26px; font-size: .78rem; }
+.capa input[type="range"] { accent-color: var(--brasa); width: 120px; }
+.separa { height: 1px; background: var(--linea); margin: 4px 0; }
+details.grupo > summary { list-style: none; }
+details.grupo > summary::-webkit-details-marker { display: none; }
+details.grupo > summary .chev { font-size: .7rem; color: var(--tenue); transition: transform .15s; }
+details.grupo[open] > summary .chev { transform: rotate(90deg); }
+.sub { padding: 2px 14px 10px 42px; display: grid; gap: 7px; font-size: .88rem; }
+.sub label.op { display: grid; grid-template-columns: auto 1fr auto; gap: 9px; align-items: center; cursor: pointer; }
+.sub label.op input { accent-color: var(--brasa); width: 15px; height: 15px; margin: 0; }
+.sub .fila-sel { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
+.sub .fila-sel select { padding: 3px 6px; min-height: 28px; font-size: .82rem; }
+
+/* Leyenda */
+.leyenda { position: absolute; left: 10px; bottom: 26px; z-index: 1002; background: rgba(28,25,22,.92);
+  border: 1px solid var(--linea); border-radius: var(--radio); padding: 9px 12px; font-size: .78rem;
+  display: grid; gap: 6px; max-width: min(430px, calc(100% - 20px)); max-height: 45%; overflow-y: auto; }
+.ley-btn { justify-self: start; background: none; border: 0; padding: 0; cursor: pointer; font: 600 .68rem/1 var(--f-titular);
+  letter-spacing: .1em; text-transform: uppercase; color: var(--brasa); }
+.ley-btn::after { content: " ▾"; }
+.ley-btn[aria-expanded="false"]::after { content: " ▸"; }
+#leyenda-cuerpo { display: grid; gap: 6px; }
+.leyenda .tit { font: 600 .68rem/1 var(--f-titular); letter-spacing: .1em; text-transform: uppercase; color: var(--tenue); }
+.leyenda .fila { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
+.leyenda i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 5px;
+  vertical-align: -1px; border: 1px solid rgba(0,0,0,.6); }
+.leyenda i.cuadro { border-radius: 2px; }
+.leyenda i.barra-c { border-radius: 2px; width: 14px; height: 8px; }
+
+/* --- Parte (panel) ------------------------------------------------------------ */
+.parte { border-left: 1px solid var(--linea); background: var(--panel); overflow-y: auto; min-height: 0;
+  padding: 16px; display: grid; align-content: start; gap: 20px; }
+.parte h2 { margin: 0; font: 700 1.35rem/1.1 var(--f-titular); text-transform: uppercase; letter-spacing: .02em;
+  text-wrap: balance; }
+.parte h3 { margin: 0 0 8px; font: 600 .78rem/1 var(--f-titular); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--tenue); display: flex; justify-content: space-between; gap: 8px; }
+.subt { margin: 4px 0 0; color: var(--tenue); font-size: .84rem; }
+.cifras { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--linea);
+  border: 1px solid var(--linea); border-radius: var(--radio); overflow: hidden; }
+.cifra { background: var(--panel); padding: 10px 12px; min-width: 0; }
+.cifra .v { font: 600 1.6rem/1.05 var(--f-titular); font-variant-numeric: tabular-nums; }
+.cifra .v small { font-size: .9rem; font-weight: 500; color: var(--tenue); margin-left: 3px; }
+.cifra .e { font-size: .76rem; color: var(--tenue); margin-top: 3px; overflow-wrap: anywhere; }
+.cifra.alerta .v { color: var(--alto); }
+.aviso { border: 1px solid #6b4a1f; background: #2a2015; border-radius: var(--radio); padding: 10px 12px;
+  font-size: .84rem; display: grid; gap: 2px; }
+.aviso strong { color: var(--medio); font: 600 .78rem/1.2 var(--f-titular); letter-spacing: .08em; text-transform: uppercase; }
+.reparto { display: flex; height: 10px; border-radius: 3px; overflow: hidden; background: var(--linea); margin: 6px 0 4px; }
+.reparto span { display: block; height: 100%; }
+.nota { font-size: .76rem; color: var(--tenue); margin: 4px 0 0; }
+.lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
+.lista button { width: 100%; text-align: left; background: transparent; border: 0; border-radius: 4px;
+  padding: 7px 8px; display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; cursor: pointer; }
+.lista button:hover { background: var(--panel-alto); }
+.lista .punto { width: 10px; height: 10px; border-radius: 50%; }
+.lista .txt { min-width: 0; }
+.lista .l1 { display: block; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lista .l2 { display: block; font: .74rem/1.3 var(--f-dato); color: var(--tenue); }
+.lista .dato { font: 500 .85rem var(--f-dato); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.vacio { color: var(--tenue); font-size: .84rem; margin: 0; padding: 4px 8px; }
+.fuentes { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .84rem; }
+.fuentes li { display: grid; grid-template-columns: auto 1fr auto; gap: 8px; align-items: baseline; }
+.chip { font: 600 .66rem/1 var(--f-titular); letter-spacing: .08em; text-transform: uppercase; padding: 3px 6px;
+  border-radius: 3px; border: 1px solid currentColor; }
+.chip.ok { color: var(--ok); } .chip.omitida { color: var(--tenue); } .chip.error { color: var(--alto); }
+.fuentes .n { font: .76rem var(--f-dato); color: var(--tenue); }
+.fuentes .det { grid-column: 2 / -1; font-size: .76rem; color: var(--tenue); }
+
+.pie { border-top: 1px solid var(--linea); padding: 8px 16px; font-size: .74rem; color: var(--tenue);
+  display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: space-between; background: var(--panel); }
+
+/* --- Marcadores y popups ---------------------------------------------------------- */
+.est, .marca-area, .marca-112, .marca-accion { background: none; border: 0; }
+.est svg { display: block; overflow: visible; }
+.marca-area span { display: block; width: 100%; height: 100%; border: 2px solid #f97316; background: rgba(194,65,12,.35); border-radius: 2px; }
+.marca-112 span { display: grid; place-items: center; width: 100%; height: 100%; border-radius: 3px; border: 2px solid;
+  background: #1b1714; font: 700 8px/1 var(--f-dato); letter-spacing: -.02em; }
+.marca-112.activo span { animation: latido 1.6s ease-in-out infinite; }
+@keyframes latido { 50% { box-shadow: 0 0 0 5px rgba(229,72,77,.35); } }
+.marca-accion span { display: grid; place-items: center; width: 100%; height: 100%; transform: rotate(45deg);
+  background: var(--bajo); border: 1.5px solid #1b1714; border-radius: 2px; }
+.marca-accion span b { transform: rotate(-45deg); font: 700 10px/1 var(--f-dato); color: #1b1714; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--panel-alto); color: var(--texto);
+  box-shadow: 0 10px 28px rgba(0,0,0,.5); border: 1px solid var(--linea); }
+.leaflet-popup-content { margin: 12px 14px; font-size: .86rem; line-height: 1.4; min-width: 230px; }
+.leaflet-container a.leaflet-popup-close-button { color: var(--tenue); }
+.pop h4 { margin: 0 0 2px; font: 700 1.05rem/1.15 var(--f-titular); text-transform: uppercase; letter-spacing: .02em; }
+.pop .de { color: var(--tenue); font-size: .78rem; margin-bottom: 8px; }
+.pop dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; }
+.pop dt { color: var(--tenue); font-size: .78rem; }
+.pop dd { margin: 0; font: .8rem var(--f-dato); font-variant-numeric: tabular-nums; }
+.pop .alerta { color: var(--alto); font-weight: 600; }
+.pop ul.acciones { margin: 8px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.pop ul.acciones li { border-left: 3px solid var(--bajo); padding-left: 8px; }
+.pop ul.acciones b { display: block; font-size: .84rem; }
+.pop ul.acciones span { font-size: .76rem; color: var(--tenue); }
+.leaflet-control-zoom a { background: var(--panel-alto); color: var(--texto); border-color: var(--linea); }
+.leaflet-control-zoom a:hover { background: var(--panel); color: var(--brasa); }
+.leaflet-control-attribution { background: rgba(19,17,15,.8) !important; color: var(--tenue); font-size: 10px; }
+.leaflet-control-attribution a { color: var(--tenue); }
+
+@media (max-width: 900px) {
+  .app { height: auto; min-height: 100%; }
+  .cuerpo { grid-template-columns: minmax(0, 1fr); }
+  .mapa-zona { height: 64vh; min-height: 380px; }
+  .parte { border-left: 0; border-top: 1px solid var(--linea); overflow: visible; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boton .flecha, details.grupo > summary .chev { transition: none; }
+  .marca-112.activo span { animation: none; }
+}
+</style>
+
+<div class="app">
+  <header class="barra">
+    <div class="marca">
+      <h1>Incendios <span>·</span> España</h1>
+      <span class="sello" id="sello">—</span>
+    </div>
+    <div class="mando">
+      <label class="campo" for="sel-region">Zona
+        <select id="sel-region"><option value="ES">España</option></select>
+      </label>
+      <button type="button" class="boton" id="btn-capas" aria-expanded="false" aria-controls="menu-capas">
+        Capas <span class="flecha" aria-hidden="true">▼</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="cuerpo">
+    <div class="mapa-zona">
+      <div id="mapa" role="region" aria-label="Mapa de focos, incidencias, riesgo y viento"></div>
+      <div id="vista3d" hidden><div class="aviso3d" id="aviso3d">Cargando relieve 3D…</div></div>
+
+      <div class="desplegable" id="menu-capas" hidden>
+        <label class="capa"><input type="checkbox" id="c-3d"><span class="nom">Relieve 3D</span><span></span>
+          <span class="ayuda">Vista tridimensional de la zona que ocupa el mapa. Arrastra para girar, rueda para acercar.</span></label>
+        <label class="capa"><input type="checkbox" id="c-sombreado" checked><span class="nom">Sombreado</span><span></span>
+          <span class="ayuda">Relieve iluminado desde el noroeste.</span></label>
+        <label class="capa"><input type="checkbox" id="c-tintado" checked><span class="nom">Tintado</span><span></span>
+          <span class="ayuda">Colores por altitud, de la costa a la alta montaña.</span></label>
+        <label class="capa"><input type="checkbox" id="c-pendiente"><span class="nom">Pendiente</span><span></span>
+          <span class="ayuda">Laderas de más de 10°. El fuego sube más rápido por ellas.</span></label>
+        <label class="capa"><input type="checkbox" id="c-cobertura"><span class="nom">Cobertura del suelo</span><span></span>
+          <span class="ayuda" id="ayuda-cobertura">Bosque, matorral, pasto, cultivo, urbano, agua… (ESA WorldCover, celdas de ≈ 370 m).</span></label>
+        <label class="capa"><input type="checkbox" id="c-limites" checked><span class="nom">Límites</span><span></span>
+          <span class="ayuda">Comunidades autónomas y provincias.</span></label>
+        <label class="capa"><input type="checkbox" id="c-riesgo"><span class="nom">Riesgo</span>
+          <select id="sel-dia" aria-label="Día de la previsión de riesgo"></select>
+          <span class="ayuda" id="ayuda-riesgo">Previsión oficial de AEMET del riesgo meteorológico de incendio.</span></label>
+        <label class="capa"><input type="checkbox" id="c-112" checked><span class="nom">Incidencias 112</span><span class="n" id="n-112"></span>
+          <span class="ayuda" id="ayuda-112">Incendios declarados por los servicios de emergencia autonómicos.</span></label>
+        <label class="capa"><input type="checkbox" id="c-propagacion" checked><span class="nom">Propagación</span>
+          <select id="sel-horizonte" aria-label="Horizonte de propagación"><option value="1">1 h</option><option value="3" selected>3 h</option><option value="6">6 h</option></select>
+          <span class="ayuda">Área que podría alcanzar cada foco con el viento actual. Ilustrativa, no es una simulación.</span></label>
+        <label class="capa"><input type="checkbox" id="c-acciones" checked><span class="nom">Acciones</span><span class="n" id="n-acciones"></span>
+          <span class="ayuda">Comprobaciones propuestas para cada foco. Automáticas, no son órdenes operativas.</span></label>
+        <div class="capa" style="cursor:default"><span></span><label class="nom" for="r-exag">Exageración</label>
+          <span class="n" id="v-exag">×2</span>
+          <span class="ayuda"><input type="range" id="r-exag" min="1" max="6" step="0.5" value="2"> Multiplica las alturas en el sombreado y el 3D.</span></div>
+        <div class="separa"></div>
+        <details class="grupo">
+          <summary class="capa"><input type="checkbox" id="c-vientos" checked aria-label="Mostrar vientos"><span class="nom">Vientos</span><span class="chev" aria-hidden="true">▶</span>
+            <span class="ayuda">Estaciones de AEMET, Puertos del Estado y modelo Open-Meteo.</span></summary>
+          <div class="sub">
+            <label class="op"><input type="checkbox" id="c-aemet" checked><span>Estaciones AEMET</span><span class="n" id="n-aemet"></span></label>
+            <label class="op"><input type="checkbox" id="c-puertos" checked><span>Puertos del Estado (boyas y puertos)</span><span class="n" id="n-puertos"></span></label>
+            <label class="op"><input type="checkbox" id="c-rejilla"><span>Open-Meteo, capitales (modelo)</span><span class="n" id="n-rejilla"></span></label>
+            <div class="fila-sel"><label for="sel-metrica">Colorear por</label>
+              <select id="sel-metrica"><option value="viento">Viento medio</option><option value="racha">Racha máxima</option><option value="temperatura">Temperatura</option><option value="humedad">Humedad</option></select></div>
+            <div class="fila-sel"><label for="sel-edad">Lecturas de hace como mucho</label>
+              <select id="sel-edad"><option value="60">1 hora</option><option value="180">3 horas</option><option value="360">6 horas</option><option value="Infinity" selected>Todas</option></select></div>
+            <label class="op"><input type="checkbox" id="c-r30"><span>Solo regla del 30</span><span class="n" id="n-r30"></span></label>
+          </div>
+        </details>
+        <details class="grupo">
+          <summary class="capa"><input type="checkbox" id="c-satelites" checked aria-label="Mostrar satélites"><span class="nom">Satélites</span><span class="chev" aria-hidden="true">▶</span>
+            <span class="ayuda">Focos de calor y áreas quemadas.</span></summary>
+          <div class="sub">
+            <label class="op"><input type="checkbox" id="c-firms" checked><span>NASA FIRMS (VIIRS · MODIS)</span><span class="n" id="n-firms"></span></label>
+            <label class="op"><input type="checkbox" id="c-seviri" checked><span>Meteosat SEVIRI</span><span class="n" id="n-seviri"></span></label>
+            <label class="op"><input type="checkbox" id="c-areas" checked><span>Áreas quemadas EFFIS</span><span class="n" id="n-areas"></span></label>
+            <div class="fila-sel"><label for="sel-conf">Confianza mínima</label>
+              <select id="sel-conf"><option value="0">Todas</option><option value="1">Media o alta</option><option value="2">Solo alta</option></select></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="leyenda" id="leyenda">
+        <button type="button" class="ley-btn" id="btn-leyenda" aria-expanded="true" aria-controls="leyenda-cuerpo">Leyenda</button>
+        <div id="leyenda-cuerpo" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <aside class="parte" aria-label="Parte de situación">
+      <div>
+        <h2 id="r-titulo">España</h2>
+        <p class="subt" id="r-sub"></p>
+      </div>
+      <div class="cifras" id="cifras"></div>
+      <div class="aviso" id="aviso-seviri" hidden></div>
+      <section id="sec-riesgo" hidden><h3><span>Riesgo previsto (AEMET)</span><span id="h-riesgo"></span></h3><div id="riesgo-zona"></div></section>
+      <section><h3><span>Incidencias 112</span><span id="h-112"></span></h3><ol class="lista" id="lista-112"></ol></section>
+      <section><h3><span>Acciones propuestas</span><span id="h-acciones"></span></h3><ol class="lista" id="lista-acciones"></ol>
+        <p class="nota">Reglas automáticas sobre los datos de esta página. Sirven para priorizar comprobaciones, no sustituyen al criterio del servicio de extinción.</p></section>
+      <section><h3><span>Focos de calor</span><span id="h-focos"></span></h3><ol class="lista" id="lista-focos"></ol></section>
+      <section><h3><span>Áreas quemadas</span><span id="h-areas"></span></h3><ol class="lista" id="lista-areas"></ol></section>
+      <section><h3><span>Rachas más fuertes</span></h3><ol class="lista" id="lista-viento"></ol></section>
+      <section><h3><span>Estado de las fuentes</span></h3><ul class="fuentes" id="lista-fuentes"></ul></section>
+    </aside>
+  </main>
+
+  <footer class="pie">
+    <span>Herramienta de investigación. No sustituye a los avisos oficiales: ante un incendio, llama al 112.</span>
+    <span>NASA FIRMS · EUMETSAT LSA SAF · Copernicus EFFIS · AEMET · Puertos del Estado · INFOCA · INFOCAM · Bombers · INFORCYL · Open-Meteo · cobertura © ESA WorldCover 2021 · relieve AWS Terrain Tiles · límites © EuroGeographics</span>
+  </footer>
+</div>
+
+<script id="datos" type="application/json">__DATOS__</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+/*__VISOR_JS__*/
+</script>

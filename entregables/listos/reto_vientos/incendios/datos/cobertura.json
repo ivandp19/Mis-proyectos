@@ -1,0 +1,34 @@
+{
+ "fuente": "ESA WorldCover 10 m 2021 v200 (© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium), CC BY 4.0",
+ "resolucion": "1/1200° (bloques de 10×10 píxeles de 10 m, cobertura dominante)",
+ "crs": "EPSG:4326",
+ "zonas": {
+  "peninsula": "cobertura_peninsula.tif",
+  "canarias": "cobertura_canarias.tif"
+ },
+ "teselas": [
+  "N27W021",
+  "N27W018",
+  "N27W015",
+  "N33W006",
+  "N33W003",
+  "N36W012",
+  "N36W009",
+  "N36W006",
+  "N36W003",
+  "N36E000",
+  "N36E003",
+  "N39W012",
+  "N39W009",
+  "N39W006",
+  "N39W003",
+  "N39E000",
+  "N39E003",
+  "N42W012",
+  "N42W009",
+  "N42W006",
+  "N42W003",
+  "N42E000",
+  "N42E003"
+ ]
+}
