@@ -406,26 +406,35 @@ const BASES = {   // sin API key
 };
 const map = L.map('mapa', {preferCanvas: true, minZoom: 4, zoomSnap: .5}).setView([39.9, -3.7], 6);
 let base = null;
-function ponerBase(k) { if (base) map.removeLayer(base);
-  base = L.tileLayer(BASES[k][0], {attribution: BASES[k][1], maxZoom: BASES[k][2]}).addTo(map); base.bringToBack(); }
+let baseKey = 'oscuro';
+function ponerBase(k) { if (base) map.removeLayer(base); baseKey = k;
+  base = L.tileLayer(BASES[k][0], {attribution: BASES[k][1], maxZoom: BASES[k][2]}).addTo(map); base.bringToBack(); aplicarMezcla(); }
 $('#sel-base').onchange = e => ponerBase(e.target.value);
 ponerBase('oscuro');
 
-// Relieve: sombreado de laderas (Esri World Hillshade, sin clave) mezclado en modo "hard-light" sobre el mapa base
-map.createPane('relieve'); map.getPane('relieve').style.zIndex = 250; map.getPane('relieve').style.mixBlendMode = 'hard-light';
+// Relieve: sombreado de laderas (Esri World Hillshade, sin clave) mezclado sobre el mapa base
+map.createPane('relieve'); map.getPane('relieve').style.zIndex = 250;
 map.getPane('relieve').style.pointerEvents = 'none';
+// Cómo se mezcla el sombreado (claro) con cada mapa base: en los claros solo oscurece las laderas (multiply);
+// en el oscuro lo aclara un poco (overlay) sin lavar el mapa.
+const MEZCLA = {oscuro: ['overlay', 0.55], claro: ['multiply', 0.6], calles: ['multiply', 0.5], satelite: ['multiply', 0.4]};
+function aplicarMezcla() {
+  const p = map.getPane('relieve'); if (!p) return;
+  const [modo, op] = MEZCLA[baseKey]; p.style.mixBlendMode = modo;
+  const r = document.getElementById('r-relieve'); if (r) { r.value = Math.round(op * 100); r.oninput && r.oninput({target: r}); }
+}
 const capaRelieve = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}',
-  {pane: 'relieve', attribution: 'Relieve © Esri', maxZoom: 16, maxNativeZoom: 16, opacity: .7});
+  {pane: 'relieve', attribution: 'Relieve © Esri', maxZoom: 16, maxNativeZoom: 16, opacity: .55});
 document.getElementById('menu-capas').insertAdjacentHTML('afterbegin', `
   <label class="capa"><input type="checkbox" id="c-relieve" checked><span class="nom">Relieve</span><span></span>
-    <span class="ayuda">Sombreado de montañas y valles. En satélite no hace falta.</span></label>
-  <div class="capa" style="cursor:default"><span></span><label class="nom" for="r-relieve">Intensidad del relieve</label><span class="n" id="v-relieve">70 %</span>
-    <span class="ayuda"><input type="range" id="r-relieve" min="10" max="100" step="5" value="70" style="width:100%"></span></div>
+    <span class="ayuda">Sombreado de montañas y valles. La intensidad se ajusta sola al cambiar de mapa base.</span></label>
+  <div class="capa" style="cursor:default"><span></span><label class="nom" for="r-relieve">Intensidad del relieve</label><span class="n" id="v-relieve">55 %</span>
+    <span class="ayuda"><input type="range" id="r-relieve" min="10" max="100" step="5" value="55" style="width:100%"></span></div>
   <div class="separa"></div>`);
 const relieveOn = () => { document.getElementById('c-relieve').checked ? capaRelieve.addTo(map) : map.removeLayer(capaRelieve); };
 document.getElementById('c-relieve').onchange = relieveOn;
 document.getElementById('r-relieve').oninput = e => { capaRelieve.setOpacity(e.target.value / 100); document.getElementById('v-relieve').textContent = e.target.value + ' %'; };
-relieveOn();
+relieveOn(); aplicarMezcla();
 
 // Menú de capas y leyenda desplegables
 const btn = $('#btn-capas'), menu = $('#menu-capas');
